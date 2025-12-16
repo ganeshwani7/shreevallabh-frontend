@@ -1,0 +1,74 @@
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-content">
+      <div class="topbar-info">
+        <span class="info-item">
+          <mat-icon>location_on</mat-icon>
+          Shop No. 02, Alsana Complex, Saikheda Chowfuli, Ozer (Mig), Tal. Niphad, Nashik, Maharashtra
+        </span>
+        <span class="info-item">
+          <mat-icon>phone</mat-icon>
+          +91-9689324004
+        </span>
+        <span class="info-item">
+          <mat-icon>email</mat-icon>
+          shreevallabh75&#64;gmail.com
+        </span>
+      </div>
+      <div class="topbar-social">
+        <a href="https://www.facebook.com/Shree-Vallabh-Agency-1590938711165787/" target="_blank" rel="noopener">
+          <mat-icon>facebook</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar class="header-toolbar">
+  <div class="container toolbar-content">
+    <a routerLink="/" class="logo">
+      <img src="assets/images/logo.png" alt="Shree Vallabh Agency" class="logo-img">
+      <span class="logo-text">Shree Vallabh Agency</span>
+    </a>
+
+    <nav class="desktop-nav">
+      @for (link of navLinks; track link.path) {
+        @if (link.hasDropdown) {
+          <button mat-button [matMenuTriggerFor]="submenu" class="dropdown-trigger">
+            {{ link.label }}
+            <mat-icon class="dropdown-icon">arrow_drop_down</mat-icon>
+          </button>
+          <mat-menu #submenu="matMenu">
+            @for (child of link.children; track child.path) {
+              <a mat-menu-item [routerLink]="child.path">{{ child.label }}</a>
+            }
+          </mat-menu>
+        } @else {
+          <a mat-button
+             [routerLink]="link.path"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: link.exact}">
+            {{ link.label }}
+          </a>
+        }
+      }
+    </nav>
+
+    <button mat-icon-button class="mobile-menu-btn" [matMenuTriggerFor]="mobileMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #mobileMenu="matMenu">
+      @for (link of navLinks; track link.path) {
+        @if (link.hasDropdown) {
+          <span mat-menu-item disabled class="mobile-menu-header">{{ link.label }}</span>
+          @for (child of link.children; track child.path) {
+            <a mat-menu-item [routerLink]="child.path" class="mobile-submenu-item">{{ child.label }}</a>
+          }
+        } @else {
+          <a mat-menu-item [routerLink]="link.path">{{ link.label }}</a>
+        }
+      }
+    </mat-menu>
+  </div>
+</mat-toolbar>

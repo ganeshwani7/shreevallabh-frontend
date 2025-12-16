@@ -1,0 +1,128 @@
+<section class="hero">
+  <div class="hero-slider">
+    @for (slide of sliderImages; track slide; let i = $index) {
+      <div class="slide" [class.active]="i === currentSlide">
+        <img [src]="slide" alt="Shree Vallabh Agency">
+      </div>
+    }
+  </div>
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Welcome to <span class="highlight">Shree Vallabh Agency</span></h1>
+        <p class="hero-subtitle">Importer & Traders in Agriculture Sprayers, Spray Pump, Nozzles & Accessories</p>
+        <a mat-raised-button color="primary" routerLink="/products">View Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="container">
+    <h2>Welcome to <span class="highlight">Shree Vallabh Agency</span></h2>
+    <div class="about-grid">
+      <div class="about-content">
+        <h3>Premium Sprayer & Nozzles</h3>
+        <p>
+          Shree Vallabh Agency imports & trades agricultural sprayer equipment since 2014, 
+          providing agricultural spraying solutions. We are committed to continuous growth 
+          and innovation for the benefit of our customers and farmers.
+        </p>
+        <p>
+          We are the authorized dealer of Comet Diaphragm Pump, Valvomeccanica SRL (Italy). 
+          Shree Vallabh Agency also deals in 600 liter Agricultural Blower, Agricultural Air Blower, 
+          Agricultural Blower Pump & Accessories in Niphad, Nashik, Maharashtra.
+        </p>
+        <h4>Shree Vallabh Agency Serves:</h4>
+        <ul class="service-list">
+          <li><mat-icon>check_circle</mat-icon> Comet 71 LT Diaphragm Pump</li>
+          <li><mat-icon>check_circle</mat-icon> Orion Brass Controller</li>
+          <li><mat-icon>check_circle</mat-icon> Volvolmeccanica Gun</li>
+          <li><mat-icon>check_circle</mat-icon> VDR 50 Controller</li>
+          <li><mat-icon>check_circle</mat-icon> Pressure Meter</li>
+          <li><mat-icon>check_circle</mat-icon> Sprayer Tank Accessories</li>
+          <li><mat-icon>check_circle</mat-icon> Italian Spray Gun</li>
+          <li><mat-icon>check_circle</mat-icon> Brass Filter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sprayers-section">
+  <div class="container">
+    <h2>Agricultural <span class="highlight">Sprayers</span></h2>
+    <p class="section-subtitle">
+      We offer various types of farm sprayers including Mounted Sprayer, Trailed Sprayer, 
+      and Battery Operated Knapsack Sprayer for crops like Grapes, Pomegranates, Oranges, and more.
+    </p>
+    <div class="card-grid">
+      @for (sprayer of sprayers; track sprayer.title) {
+        <mat-card class="product-card">
+          <div class="card-image">
+            <img [src]="sprayer.image" [alt]="sprayer.title">
+          </div>
+          <mat-card-content>
+            <h3>{{ sprayer.title }}</h3>
+            <p>{{ sprayer.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button color="primary" routerLink="/products">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="equipment-section">
+  <div class="container">
+    <h2>Our <span class="highlight">Special Equipment</span></h2>
+    <p class="section-subtitle">
+      We serve special equipment including Diaphragm Pump, Orion Brass Controller, 
+      Volvolmeccanica Gun & Nozzles, Brass Filter, Fan Assembly, Pressure Meter and more.
+    </p>
+    <div class="equipment-grid">
+      @for (item of equipment; track item.title) {
+        <mat-card class="equipment-card">
+          <div class="card-image small">
+            <img [src]="item.image" [alt]="item.title">
+          </div>
+          <mat-card-content>
+            <h4>{{ item.title }}</h4>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      @for (feature of features; track feature.title) {
+        <div class="feature-card">
+          <div class="feature-icon">
+            <mat-icon>{{ feature.icon }}</mat-icon>
+          </div>
+          <h4>{{ feature.title }}</h4>
+          <p>{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="certification-section">
+  <div class="container">
+    <div class="cert-content">
+      <h2>We Are An <span class="highlight">ISO 9001:2015 Certified!</span></h2>
+      <p>
+        Quality and Reliability is what we live by. We are constantly striving for success 
+        and aim to achieve the highest quality standards for all our Products. Our highly 
+        motivated and experienced professionals focus on processes and are committed to 
+        delivering products of higher quality.
+      </p>
+    </div>
+  </div>
+</section>

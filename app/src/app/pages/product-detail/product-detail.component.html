@@ -1,0 +1,80 @@
+<section class="page-header">
+  <div class="container">
+    <h1>{{ product?.title }}</h1>
+  </div>
+</section>
+
+@if (product) {
+  <section class="product-detail-section">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-main">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.title">
+          </div>
+          <div class="product-info">
+            <h2>{{ product.title }}</h2>
+            <p class="product-description">{{ product.description }}</p>
+            <ul class="specs-list">
+              @for (spec of product.specs; track spec.label) {
+                <li>
+                  <mat-icon>check_circle</mat-icon>
+                  <strong>{{ spec.label }}:</strong> {{ spec.value }}
+                </li>
+              }
+            </ul>
+            <a mat-raised-button color="primary" routerLink="/contact" class="enquire-btn">
+              <mat-icon>mail</mat-icon>
+              Enquire Now
+            </a>
+          </div>
+        </div>
+
+        <aside class="product-sidebar">
+          <mat-card class="sidebar-card">
+            <mat-card-header>
+              <mat-card-title>Related Products</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <ul class="related-list">
+                @for (related of relatedProducts; track related.id) {
+                  <li>
+                    <a [routerLink]="['/product', related.id]">
+                      <mat-icon>chevron_right</mat-icon>
+                      {{ related.title }}
+                    </a>
+                  </li>
+                }
+              </ul>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="sidebar-card contact-card">
+            <mat-card-header>
+              <mat-card-title>Need Help?</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Contact us for more information about this product.</p>
+              <p class="contact-info">
+                <mat-icon>phone</mat-icon>
+                +91-9689324004
+              </p>
+              <p class="contact-info">
+                <mat-icon>email</mat-icon>
+                shreevallabh75&#64;gmail.com
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </aside>
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="not-found">
+    <div class="container">
+      <h2>Product Not Found</h2>
+      <p>The product you're looking for doesn't exist.</p>
+      <a mat-raised-button color="primary" routerLink="/products">View All Products</a>
+    </div>
+  </section>
+}

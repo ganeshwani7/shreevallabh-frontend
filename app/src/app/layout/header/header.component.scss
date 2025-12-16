@@ -1,0 +1,150 @@
+.topbar {
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .topbar-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .info-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    mat-icon {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+      color: #efe826;
+    }
+  }
+
+  .topbar-social a {
+    color: #efe826;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.header-toolbar {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  height: auto;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .toolbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a5f2a;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 8px;
+
+  a {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    &.active {
+      color: #1a5f2a;
+      background: rgba(26, 95, 42, 0.08);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: inline-flex;
+  }
+}
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  .dropdown-icon {
+    margin-left: -4px;
+    font-size: 20px;
+  }
+}
+
+.mobile-menu-header {
+  font-weight: 600;
+  color: #1a5f2a;
+  opacity: 1 !important;
+}
+
+.mobile-submenu-item {
+  padding-left: 32px !important;
+}

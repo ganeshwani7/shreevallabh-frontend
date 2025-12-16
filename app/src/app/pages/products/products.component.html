@@ -1,0 +1,97 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Our Products</h1>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="container">
+    <mat-tab-group>
+      <mat-tab label="Sprayers">
+        <div class="tab-content">
+          <p class="tab-intro">
+            We offer various types of farm sprayers including Mounted Sprayers, Trailed Sprayers, 
+            and Battery Operated Knapsack Sprayers for crops like Grapes, Pomegranates, Oranges, and more.
+          </p>
+          <div class="product-grid">
+            @for (item of sprayers; track item.title) {
+              <mat-card class="product-card clickable" [routerLink]="['/product', item.id]">
+                <div class="card-image">
+                  <img [src]="item.image" [alt]="item.title">
+                </div>
+                <mat-card-content>
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            }
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Equipment">
+        <div class="tab-content">
+          <p class="tab-intro">
+            Premium quality equipment including pumps, controllers, guns, and filters 
+            imported from Italy and other countries.
+          </p>
+          <div class="product-grid four-col">
+            @for (item of equipment; track item.title) {
+              <mat-card class="product-card small clickable" [routerLink]="['/product', item.id]">
+                <div class="card-image small">
+                  <img [src]="item.image" [alt]="item.title">
+                </div>
+                <mat-card-content>
+                  <h4>{{ item.title }}</h4>
+                  <p>{{ item.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            }
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Nozzles">
+        <div class="tab-content">
+          <p class="tab-intro">
+            High-quality nozzles and ceramic tips for precise spray patterns and long-lasting performance.
+          </p>
+          <div class="product-grid">
+            @for (item of nozzles; track item.title) {
+              <mat-card class="product-card small clickable" [routerLink]="['/product', item.id]">
+                <div class="card-image small">
+                  <img [src]="item.image" [alt]="item.title">
+                </div>
+                <mat-card-content>
+                  <h4>{{ item.title }}</h4>
+                  <p>{{ item.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            }
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Accessories">
+        <div class="tab-content">
+          <p class="tab-intro">
+            Complete range of accessories for sprayer maintenance and enhanced functionality.
+          </p>
+          <div class="product-grid">
+            @for (item of accessories; track item.title) {
+              <mat-card class="product-card small clickable" [routerLink]="['/product', item.id]">
+                <div class="card-image small">
+                  <img [src]="item.image" [alt]="item.title">
+                </div>
+                <mat-card-content>
+                  <h4>{{ item.title }}</h4>
+                  <p>{{ item.description }}</p>
+                </mat-card-content>
+              </mat-card>
+            }
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</section>

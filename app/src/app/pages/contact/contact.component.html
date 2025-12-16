@@ -1,0 +1,65 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Have questions about our products? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        
+        <div class="info-cards">
+          @for (info of contactInfo; track info.title) {
+            <div class="info-card">
+              <div class="info-icon">
+                <mat-icon>{{ info.icon }}</mat-icon>
+              </div>
+              <div class="info-content">
+                <h4>{{ info.title }}</h4>
+                <p>{{ info.content }}</p>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="social-links">
+          <h4>Follow Us</h4>
+          <a href="https://www.facebook.com/Shree-Vallabh-Agency-1590938711165787/" target="_blank" rel="noopener" class="social-link">
+            <mat-icon>facebook</mat-icon>
+            Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send us a Message</h2>
+        <form>
+          <mat-form-field appearance="outline">
+            <mat-label>Your Name</mat-label>
+            <input matInput placeholder="Enter your name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput type="email" placeholder="Enter your email">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="tel" placeholder="Enter your phone number">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Message</mat-label>
+            <textarea matInput rows="5" placeholder="Enter your message"></textarea>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

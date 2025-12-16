@@ -1,0 +1,76 @@
+<section class="page-header">
+  <div class="container">
+    <h1>About Us</h1>
+  </div>
+</section>
+
+<section class="about-intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content">
+        <h2>About <span class="highlight">Shree Vallabh Agency</span></h2>
+        <p>
+          Shree Vallabh Agency is an importer & trader of agricultural sprayer equipment since 2014, 
+          providing agricultural spraying solutions. We are committed to continuous growth and innovation 
+          for the benefit of our customers and farmers. Hence we stick to the industrial standards in 
+          every phase of the product production like quality testing.
+        </p>
+        <p>
+          We are the authorized dealer of Comet Diaphragm Pump, Valvomeccanica SRL (Italy). 
+          Shree Vallabh Agency also deals in 600 liter Agricultural Blower, Agricultural Air Blower, 
+          Agricultural Blower Pump & Accessories in Niphad, Nashik, Maharashtra.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <div class="values-grid">
+      @for (value of values; track value.title) {
+        <div class="value-card">
+          <div class="value-icon">
+            <mat-icon>{{ value.icon }}</mat-icon>
+          </div>
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-section">
+  <div class="container">
+    <div class="two-col-grid">
+      <div class="col">
+        <h2>Why Choose Us?</h2>
+        <p>
+          Leveraging on our years of experience & owing to our good market reputation, 
+          fair business dealings and ethical strategies, we have been able to establish 
+          a strong foothold in the competitive market.
+        </p>
+        <ul class="check-list">
+          @for (item of whyChooseUs; track item) {
+            <li><mat-icon>check_circle</mat-icon> {{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Customer Satisfaction & Setup</h2>
+        <p>
+          Ensuring customer delight always. Our production unit is most advanced than other 
+          and durable spares imported from other Countries. We also regularly update our 
+          systems with latest equipment that help in increasing the production capacity.
+        </p>
+        <p>
+          We are authorised dealers of Gama, Comet & Valvomeccanica SRL (Italy) from last 
+          many years and provide agricultural equipment in Niphad, Nashik, Maharashtra. 
+          Shree Vallabh Agency is endowed with a team of highly efficient tooling professionals, 
+          technocrats, marketing & sales professional and allied workers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Gallery</h1>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="container">
+    <p class="section-intro">
+      Explore our collection of agricultural sprayers, equipment, and field work photos.
+    </p>
+    <div class="gallery-grid">
+      @for (item of galleryItems; track item.title) {
+        <mat-card class="gallery-card">
+          <div class="card-image">
+            <img [src]="item.image" [alt]="item.title">
+          </div>
+          <mat-card-content>
+            <span class="category">{{ item.category }}</span>
+            <h4>{{ item.title }}</h4>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>
