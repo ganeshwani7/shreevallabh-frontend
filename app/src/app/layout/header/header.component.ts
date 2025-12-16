@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, HostBinding } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { NAV_LINKS, CONTACT_INFO } from '../../config/site.config';
 
 @Component({
   selector: 'app-header',
@@ -22,21 +23,21 @@ import { MatMenuModule } from '@angular/material/menu';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  navLinks = [
-    { path: '/', label: 'Home', exact: true },
-    { path: '/about', label: 'About Us', exact: false },
-    { path: '/products', label: 'Sprayers', exact: false, hasDropdown: true, children: [
-      { path: '/products/mounted', label: 'Mounted Sprayers' },
-      { path: '/products/trailed', label: 'Trailed Sprayers' },
-      { path: '/products/knapsack', label: 'Battery Operated Knapsack' }
-    ]},
-    { path: '/equipment', label: 'Special Equipment', exact: false },
-    { path: '/gallery', label: 'Gallery', exact: false },
-    { path: '/videos', label: 'Videos', exact: false },
-    { path: '/contact', label: 'Contact Us', exact: false }
-  ];
+  // Import from config
+  navLinks = NAV_LINKS;
+  contactInfo = CONTACT_INFO;
 
   mobileMenuOpen = false;
+  isScrolled = false;
+
+  @HostBinding('class.scrolled') get scrolledClass() {
+    return this.isScrolled;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;

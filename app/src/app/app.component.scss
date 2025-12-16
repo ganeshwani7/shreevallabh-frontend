@@ -6,4 +6,6 @@
 
 .main-content {
   flex: 1;
+  // Account for fixed header (navbar only, topbar removed)
+  padding-top: 72px;
 }

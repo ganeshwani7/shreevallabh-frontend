@@ -1,45 +1,84 @@
+// ============================================
+// TRENEXENERGY-INSPIRED FOOTER STYLES
+// Dark gradient with peaceful accents
+// ============================================
+
 .footer {
   margin-top: auto;
 }
 
 .footer-main {
-  background: #1a1a1a;
-  color: #ccc;
-  padding: 48px 0;
+  background: linear-gradient(135deg, var(--secondary-900) 0%, var(--secondary-800) 100%);
+  color: var(--gray-300);
+  padding: 64px 0 48px;
+  position: relative;
+  overflow: hidden;
+
+  // Decorative gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-500), var(--primary-400), var(--primary-500));
+  }
 
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 48px;
 
   @media (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   @media (max-width: 576px) {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
 .footer-col {
   h4 {
-    color: #fff;
-    font-size: 16px;
+    font-family: var(--font-heading);
+    color: var(--white);
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 16px;
-    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--primary-500);
+      border-radius: 2px;
+    }
   }
 
   p {
-    font-size: 13px;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    color: var(--gray-400);
   }
 
   ul {
@@ -48,58 +87,100 @@
     margin: 0;
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     a {
-      color: #ccc;
+      font-family: var(--font-body);
+      color: var(--gray-400);
       text-decoration: none;
-      font-size: 13px;
-      transition: color 0.2s;
+      font-size: 0.9375rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: var(--primary-400);
+        transition: width 0.3s ease;
+      }
 
       &:hover {
-        color: #efe826;
+        color: var(--primary-400);
+        transform: translateX(4px);
+
+        &::before {
+          width: 12px;
+        }
       }
     }
+  }
+}
+
+.about-col {
+  p {
+    margin-bottom: 20px;
   }
 }
 
 .contact-info {
   .contact-item {
     display: flex;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 14px;
+    margin-bottom: 16px;
+    align-items: flex-start;
 
     mat-icon {
-      color: #efe826;
-      font-size: 18px;
-      width: 18px;
-      height: 18px;
+      color: var(--primary-400);
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
       flex-shrink: 0;
       margin-top: 2px;
     }
 
     p {
       margin: 0;
-      font-size: 13px;
+      font-size: 0.9375rem;
+      color: var(--gray-400);
+      line-height: 1.6;
     }
   }
 }
 
 .footer-bottom {
-  background: #000;
-  color: #999;
-  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--gray-500);
+  padding: 20px 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   p {
     margin: 0;
+    font-family: var(--font-body);
+
+    a {
+      color: var(--primary-400);
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--primary-300);
+      }
+    }
   }
 }

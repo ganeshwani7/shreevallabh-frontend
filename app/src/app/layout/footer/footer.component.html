@@ -3,12 +3,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col about-col">
-          <h4>About Shree Vallabh Agency</h4>
-          <p>
-            Shree Vallabh Agency is an Importer & Trader of Agricultural Sprayer Equipment since 2014, 
-            providing agricultural spraying solutions. We are committed to continuous growth and innovation 
-            for the benefit of our customers and farmers.
-          </p>
+          <h4>About {{ companyInfo.name }}</h4>
+          <p>{{ companyInfo.description }}</p>
         </div>
 
         <div class="footer-col">
@@ -34,15 +30,15 @@
           <div class="contact-info">
             <div class="contact-item">
               <mat-icon>location_on</mat-icon>
-              <p>Shop No. 02, Alsana Complex, Saikheda Chowfuli, Ozer (Mig), Tal. Niphad, Dist. Nashik, Maharashtra, India.</p>
+              <p>{{ contactInfo.address.full }}</p>
             </div>
             <div class="contact-item">
               <mat-icon>email</mat-icon>
-              <p>shreevallabh75&#64;gmail.com</p>
+              <p>{{ contactInfo.email }}</p>
             </div>
             <div class="contact-item">
               <mat-icon>phone</mat-icon>
-              <p>+91-9689324004</p>
+              <p>{{ contactInfo.phone }}</p>
             </div>
           </div>
         </div>
@@ -52,7 +48,7 @@
 
   <div class="footer-bottom">
     <div class="container">
-      <p>&copy; {{ currentYear }} Shree Vallabh Agency. All Rights Reserved.</p>
+      <p>&copy; {{ currentYear }} {{ companyInfo.name }}. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
