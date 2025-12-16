@@ -10,7 +10,7 @@ export const routes: Routes = [
   { path: 'product/:id', loadComponent: () => import('./pages/product-detail/product-detail.component').then(m => m.ProductDetailComponent) },
   { path: 'equipment', loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent), data: { category: 'equipment' } },
   { path: 'gallery', loadComponent: () => import('./pages/gallery/gallery.component').then(m => m.GalleryComponent) },
-  { path: 'videos', loadComponent: () => import('./pages/gallery/gallery.component').then(m => m.GalleryComponent), data: { type: 'videos' } },
+  { path: 'videos', loadComponent: () => import('./pages/videos/videos.component').then(m => m.VideosComponent) },
   { path: 'contact', loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent) },
   { path: '**', redirectTo: '' }
 ];

@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'mounted-sprayer',
       title: 'Mounted Sprayer (200L)',
-      image: '/shreevallabh/assets/images/services/200lit_mounted1.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/200lit_mounted1.jpg',
       description: '200 Litre capacity mounted sprayers for efficient tractor-based crop spraying operations. Ideal for vineyards, orchards, and row crops.',
       specs: [
         { label: 'Capacity', value: '200 Litres' },
@@ -50,7 +50,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'trailed-sprayer',
       title: 'Trailed Sprayer (Citrus Plus)',
-      image: '/shreevallabh/assets/images/services/Citrus-Plus1.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/Citrus-Plus1.jpg',
       description: 'High capacity trailed sprayers ideal for large orchards and vineyards. Features advanced air-blast technology for superior coverage.',
       specs: [
         { label: 'Capacity', value: '400-600 Litres' },
@@ -65,7 +65,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'knapsack-sprayer',
       title: 'Battery Operated Knapsack',
-      image: '/shreevallabh/assets/images/services/knapsack-sprayer02.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/knapsack-sprayer02.jpg',
       description: 'Portable battery-powered sprayers for small areas and precision spraying. Lightweight and easy to operate.',
       specs: [
         { label: 'Capacity', value: '16-20 Litres' },
@@ -81,7 +81,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'diaphragm-pump',
       title: 'Comet 71 LT Diaphragm Pump',
-      image: '/shreevallabh/assets/images/services/special1.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special1.jpg',
       description: 'High-quality Italian diaphragm pump for reliable spraying performance. Comet pumps are known for durability and efficiency.',
       specs: [
         { label: 'Brand', value: 'Comet (Italy)' },
@@ -96,7 +96,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'orion-controller',
       title: 'Orion Brass Controller',
-      image: '/shreevallabh/assets/images/services/special2.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special2.jpg',
       description: 'Premium brass controller for precise pressure regulation. Italian quality for professional spraying applications.',
       specs: [
         { label: 'Brand', value: 'Orion (Italy)' },
@@ -111,7 +111,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'vdr-controller',
       title: 'VDR 50 Controller',
-      image: '/shreevallabh/assets/images/services/special4.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special4.jpg',
       description: 'Advanced controller for professional spraying applications. Provides precise control over spray operations.',
       specs: [
         { label: 'Model', value: 'VDR 50' },
@@ -126,7 +126,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'volvolmeccanica-gun',
       title: 'Volvolmeccanica Gun',
-      image: '/shreevallabh/assets/images/services/special3.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special3.jpg',
       description: 'Italian-made spray gun for accurate and efficient spraying. Premium quality from Volvolmeccanica.',
       specs: [
         { label: 'Brand', value: 'Volvolmeccanica (Italy)' },
@@ -141,7 +141,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'brass-filter',
       title: 'Brass Filter',
-      image: '/shreevallabh/assets/images/services/special8.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special8.jpg',
       description: 'Durable brass filter for clean, clog-free operation. Essential for maintaining spray quality.',
       specs: [
         { label: 'Material', value: 'Brass' },
@@ -156,7 +156,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'pressure-meter',
       title: 'Pressure Meter',
-      image: '/shreevallabh/assets/images/services/special5.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special5.jpg',
       description: 'Accurate pressure measurement for optimal spraying. Essential for monitoring spray system performance.',
       specs: [
         { label: 'Type', value: 'Analog/Digital' },
@@ -172,7 +172,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'albuz-ceramic',
       title: 'ALBUZ Ceramic Tip',
-      image: '/shreevallabh/assets/images/projects/albuz-ceramic-tip.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/albuz-ceramic-tip.jpg',
       description: 'Long-lasting ceramic tip for consistent spray quality. ALBUZ nozzles are industry standard for precision.',
       specs: [
         { label: 'Brand', value: 'ALBUZ' },
@@ -187,7 +187,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'atr60-yellow',
       title: 'ATR 60 Yellow',
-      image: '/shreevallabh/assets/images/projects/atr60-yellow.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/atr60-yellow.jpg',
       description: 'Color-coded nozzle for specific flow rates. Yellow coding indicates standard flow rate.',
       specs: [
         { label: 'Model', value: 'ATR 60' },
@@ -202,7 +202,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'atr-disk',
       title: 'ATR 80 Disc',
-      image: '/shreevallabh/assets/images/projects/atr_disk-1.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/atr_disk-1.jpg',
       description: 'Disc-type nozzle for hollow cone spray patterns. Ideal for orchard and vineyard applications.',
       specs: [
         { label: 'Model', value: 'ATR 80' },
@@ -218,7 +218,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'pto-accessories',
       title: 'PTO Shaft Accessories',
-      image: '/shreevallabh/assets/images/services/special6.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special6.jpg',
       description: 'Power take-off accessories for tractor-mounted sprayers. Essential for connecting sprayer to tractor PTO.',
       specs: [
         { label: 'Model', value: 'CROSS' },
@@ -234,7 +234,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'tank-mixer',
       title: 'Tank Mixer',
-      image: '/shreevallabh/assets/images/projects/tank_mixer-1.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/tank_mixer-1.jpg',
       description: 'Efficient mixing system for spray solutions. Ensures uniform mixture for consistent application.',
       specs: [
         { label: 'Type', value: 'Hydraulic Mixer' },
@@ -249,7 +249,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'high-pressure-gun',
       title: 'High Pressure Gun',
-      image: '/shreevallabh/assets/images/projects/highpressure1.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/highpressure1.jpg',
       description: 'Heavy-duty gun for high-pressure applications. Built for demanding professional use.',
       specs: [
         { label: 'Type', value: 'High Pressure' },
@@ -264,7 +264,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'pruning-secateur',
       title: 'Pruning Secateur',
-      image: '/shreevallabh/assets/images/projects/pruning_secateur.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/pruning_secateur.jpg',
       description: 'Professional pruning tool for orchard maintenance. Sharp and durable for clean cuts.',
       specs: [
         { label: 'Type', value: 'Bypass Secateur' },
@@ -279,7 +279,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'italian-gun',
       title: 'Italian Spray Gun',
-      image: '/shreevallabh/assets/images/services/special7.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special7.jpg',
       description: 'High-quality Italian spray gun for precision application. Designed for professional agricultural spraying.',
       specs: [
         { label: 'Origin', value: 'Italy' },
@@ -294,7 +294,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'piston-pump',
       title: 'Grease Free Piston Pump',
-      image: '/shreevallabh/assets/images/projects/piston_pump-1.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/piston_pump-1.jpg',
       description: 'Maintenance-friendly piston pump design. No grease required for smooth operation.',
       specs: [
         { label: 'Type', value: 'Piston Pump' },
@@ -309,7 +309,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'fan-assembly',
       title: 'Fan Assembly',
-      image: '/shreevallabh/assets/images/services/special6.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special6.jpg',
       description: 'High-performance fan assembly for air-blast sprayers. Provides powerful air flow for effective coverage.',
       specs: [
         { label: 'Type', value: 'Axial Fan' },
@@ -324,7 +324,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'tank-accessories',
       title: 'Sprayer Tank Accessories',
-      image: '/shreevallabh/assets/images/projects/tank_mixer-1.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/tank_mixer-1.jpg',
       description: 'Complete range of tank fittings, lids, and accessories for sprayer tanks.',
       specs: [
         { label: 'Type', value: 'Tank Accessories' },
@@ -339,7 +339,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'm82-nozzle',
       title: 'M 82 Volvolmeccanica Nozzle',
-      image: '/shreevallabh/assets/images/services/special3.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special3.jpg',
       description: 'Premium Italian nozzle for fine spray patterns. Volvolmeccanica quality for professional use.',
       specs: [
         { label: 'Brand', value: 'Volvolmeccanica (Italy)' },
@@ -354,7 +354,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'm65-nozzle',
       title: 'M 65 Nozzle',
-      image: '/shreevallabh/assets/images/services/special7.jpg',
+      image: '/shreevallabh-frontend/assets/images/services/special7.jpg',
       description: 'Versatile nozzle for various spraying applications. Reliable performance for different crops.',
       specs: [
         { label: 'Model', value: 'M 65' },
@@ -369,7 +369,7 @@ export class ProductDetailComponent implements OnInit {
     {
       id: 'bell-nozzle',
       title: 'Sprayer Bell Nozzle',
-      image: '/shreevallabh/assets/images/projects/ball.jpg',
+      image: '/shreevallabh-frontend/assets/images/projects/ball.jpg',
       description: 'Bell-shaped nozzle for wide coverage. Ideal for broad area spraying applications.',
       specs: [
         { label: 'Type', value: 'Bell Nozzle' },
