@@ -5,14 +5,15 @@
 }
 
 .page-header {
-  background: linear-gradient(135deg, #1a5f2a 0%, #2d8a3e 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-600) 100%);
+  color: var(--gray-100);
   padding: 48px 0;
   text-align: center;
 
   h1 {
     font-size: 2rem;
     margin: 0;
+    color: var(--gray-100);
   }
 }
 
@@ -42,8 +43,8 @@
 }
 
 .product-image {
-  background: #f5f5f5;
-  border-radius: 8px;
+  background: var(--gray-100);
+  border-radius: 12px;
   overflow: hidden;
 
   img {
@@ -55,13 +56,13 @@
 
 .product-info {
   h2 {
-    color: #1a5f2a;
+    color: var(--primary-700);
     margin: 0 0 16px;
     font-size: 1.5rem;
   }
 
   .product-description {
-    color: #666;
+    color: var(--gray-600);
     line-height: 1.7;
     margin-bottom: 24px;
   }
@@ -80,7 +81,7 @@
     border-bottom: 1px solid #eee;
 
     mat-icon {
-      color: #efe826;
+      color: var(--primary-500);
       font-size: 20px;
       width: 20px;
       height: 20px;
@@ -89,7 +90,7 @@
     }
 
     strong {
-      color: #333;
+      color: var(--gray-800);
     }
   }
 }
@@ -114,17 +115,18 @@
 
 .sidebar-card {
   margin-bottom: 16px;
+  border-radius: 12px;
 
   mat-card-header {
-    background: #1a5f2a;
-    color: #fff;
+    background: var(--primary-600);
+    color: var(--white);
     padding: 12px 16px;
     margin: -16px -16px 16px;
 
     mat-card-title {
       font-size: 1rem;
       margin: 0;
-      color: #fff;
+      color: var(--white);
     }
   }
 }
@@ -146,19 +148,19 @@
       align-items: center;
       gap: 4px;
       padding: 10px 0;
-      color: #333;
+      color: var(--gray-700);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.3s ease;
 
       &:hover {
-        color: #1a5f2a;
+        color: var(--primary-600);
       }
 
       mat-icon {
         font-size: 18px;
         width: 18px;
         height: 18px;
-        color: #1a5f2a;
+        color: var(--primary-600);
       }
     }
   }
@@ -170,10 +172,10 @@
     align-items: center;
     gap: 8px;
     margin: 8px 0;
-    color: #333;
+    color: var(--gray-700);
 
     mat-icon {
-      color: #1a5f2a;
+      color: var(--primary-600);
       font-size: 18px;
       width: 18px;
       height: 18px;
@@ -186,12 +188,12 @@
   text-align: center;
 
   h2 {
-    color: #333;
+    color: var(--gray-800);
     margin-bottom: 16px;
   }
 
   p {
-    color: #666;
+    color: var(--gray-600);
     margin-bottom: 24px;
   }
 }
