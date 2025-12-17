@@ -6,6 +6,27 @@
       </div>
     }
   </div>
+  
+  <!-- Slider Navigation Arrows -->
+  <button class="slider-arrow slider-arrow-prev" (click)="prevSlide()" aria-label="Previous slide">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <button class="slider-arrow slider-arrow-next" (click)="nextSlide()" aria-label="Next slide">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+  
+  <!-- Slider Dots -->
+  <div class="slider-dots">
+    @for (slide of sliderImages; track slide; let i = $index) {
+      <button 
+        class="slider-dot" 
+        [class.active]="i === currentSlide"
+        (click)="currentSlide = i"
+        [attr.aria-label]="'Go to slide ' + (i + 1)">
+      </button>
+    }
+  </div>
+  
   <div class="hero-overlay">
     <div class="container">
       <div class="hero-content">

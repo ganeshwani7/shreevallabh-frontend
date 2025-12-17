@@ -37,6 +37,16 @@ export class HomeComponent {
   constructor() {
     setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.sliderImages.length;
-    }, 4000);
+    }, 5000);
+  }
+
+  prevSlide() {
+    this.currentSlide = this.currentSlide === 0 
+      ? this.sliderImages.length - 1 
+      : this.currentSlide - 1;
+  }
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.sliderImages.length;
   }
 }
