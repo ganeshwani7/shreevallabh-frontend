@@ -1,0 +1,68 @@
+<div class="chat-widget">
+  <!-- Chat Button -->
+  <button class="chat-fab" (click)="toggleChat()" [class.open]="isOpen" aria-label="Chat with us">
+    <mat-icon class="chat-icon">chat</mat-icon>
+    <mat-icon class="close-icon">close</mat-icon>
+  </button>
+
+  <!-- Chat Panel -->
+  <div class="chat-panel" [class.open]="isOpen">
+    <div class="chat-header">
+      <div class="chat-header-content">
+        <div class="chat-avatar">
+          <mat-icon>support_agent</mat-icon>
+        </div>
+        <div class="chat-header-text">
+          <h4>Have a question?</h4>
+          <p>We typically reply within minutes</p>
+        </div>
+      </div>
+      <button class="chat-close" (click)="toggleChat()">
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-message">
+        <div class="message-avatar">
+          <mat-icon>support_agent</mat-icon>
+        </div>
+        <div class="message-content">
+          <p>Enter your question below and a representative will get right back to you.</p>
+        </div>
+      </div>
+
+      <form class="chat-form" (ngSubmit)="sendMessage()">
+        <div class="form-group">
+          <input 
+            type="text" 
+            placeholder="Name" 
+            [(ngModel)]="formData.name"
+            name="name"
+            required>
+        </div>
+        <div class="form-group">
+          <input 
+            type="tel" 
+            placeholder="Phone" 
+            [(ngModel)]="formData.phone"
+            name="phone"
+            required>
+        </div>
+        <div class="form-group">
+          <textarea 
+            placeholder="I want to know more"
+            [(ngModel)]="formData.message"
+            name="message"
+            rows="3"
+            required></textarea>
+        </div>
+        <p class="form-disclaimer">By submitting you agree to receive SMS or e-mails for the provided channel.</p>
+        <button type="submit" class="send-btn">
+          <span>Send</span>
+          <mat-icon>send</mat-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

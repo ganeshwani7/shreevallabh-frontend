@@ -1,0 +1,31 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Videos</h1>
+  </div>
+</section>
+
+<section class="videos-section">
+  <div class="container">
+    <p class="section-intro">
+      Watch our agricultural sprayer equipment demonstrations and see our products in action.
+    </p>
+    <div class="videos-grid">
+      @for (video of videos; track video.videoId) {
+        <mat-card class="video-card">
+          <div class="video-wrapper">
+            <iframe
+              [src]="getVideoUrl(video.videoId)"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <mat-card-content>
+            <h3>{{ video.title }}</h3>
+            <p>{{ video.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>
