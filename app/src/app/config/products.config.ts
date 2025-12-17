@@ -23,54 +23,198 @@ export interface Product {
 export const ASSETS_BASE_PATH = '/shreevallabh-frontend';
 
 // ============================================
-// SPRAYERS
+// SPRAYERS - MOUNTED
 // ============================================
-export const SPRAYERS: Product[] = [
+export const MOUNTED_SPRAYERS: Product[] = [
   {
-    id: 'mounted-sprayer',
-    title: 'Mounted Sprayer (200L)',
+    id: 'mounted-200l',
+    title: '200 Litre Mounted Sprayer',
     image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
-    description: '200 Litre capacity mounted sprayers for efficient tractor-based crop spraying operations. Ideal for vineyards, orchards, and row crops.',
+    description: 'The 200 Litre Mounted Sprayer is designed for efficient tractor-based crop spraying operations. It features a durable HDPE tank with UV stabilization, heavy-duty steel frame for mounting on tractors, and is compatible with various pump types. This sprayer is ideal for small to medium-sized vineyards, orchards, and row crops. The compact design allows easy maneuverability between rows while providing consistent spray coverage. Equipped with adjustable nozzle holders and pressure regulation system for precise application.',
     specs: [
-      { label: 'Capacity', value: '200 Litres' },
-      { label: 'Type', value: 'Tractor Mounted' },
-      { label: 'Usage', value: 'Grapes, Pomegranates, Oranges, Row Crops' },
-      { label: 'Pump Type', value: 'Diaphragm Pump' },
-      { label: 'Pressure', value: 'Up to 40 Bar' },
-      { label: 'Material', value: 'HDPE Tank, Steel Frame' }
+      { label: 'Tank Capacity', value: '200 Litres' },
+      { label: 'Tank Material', value: 'HDPE with UV Stabilization' },
+      { label: 'Frame', value: 'Heavy Duty Steel, Powder Coated' },
+      { label: 'Mounting', value: '3-Point Linkage (Cat I & II)' },
+      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
+      { label: 'Working Pressure', value: 'Up to 40 Bar' },
+      { label: 'Agitation', value: 'Hydraulic Agitator' },
+      { label: 'Suitable Crops', value: 'Grapes, Pomegranates, Oranges, Vegetables' }
     ],
     category: 'sprayers'
   },
   {
-    id: 'trailed-sprayer',
-    title: 'Trailed Sprayer (Citrus Plus)',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
-    description: 'High capacity trailed sprayers ideal for large orchards and vineyards. Features advanced air-blast technology for superior coverage.',
+    id: 'mounted-300l',
+    title: '300 Litre Mounted Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
+    description: 'The 300 Litre Mounted Sprayer offers increased capacity for medium-sized farming operations. Built with a robust HDPE tank and reinforced steel frame, this sprayer provides excellent durability and reliability. Features include an integrated pressure gauge, multiple outlet connections, and easy-fill lid design. The sprayer is designed for efficient coverage of vineyards, orchards, and field crops with minimal refilling stops.',
     specs: [
-      { label: 'Capacity', value: '400-600 Litres' },
-      { label: 'Type', value: 'Trailed/Towed' },
-      { label: 'Usage', value: 'Large Orchards, Vineyards, Citrus Farms' },
-      { label: 'Fan Type', value: 'Axial Flow Fan' },
-      { label: 'Air Output', value: 'High Volume' },
-      { label: 'Coverage', value: 'Wide Area Spraying' }
+      { label: 'Tank Capacity', value: '300 Litres' },
+      { label: 'Tank Material', value: 'HDPE with UV Stabilization' },
+      { label: 'Frame', value: 'Reinforced Steel Frame' },
+      { label: 'Mounting', value: '3-Point Linkage (Cat I & II)' },
+      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
+      { label: 'Working Pressure', value: 'Up to 40 Bar' },
+      { label: 'Agitation', value: 'Hydraulic Agitator' },
+      { label: 'Suitable Crops', value: 'Grapes, Pomegranates, Citrus, Field Crops' }
     ],
     category: 'sprayers'
   },
   {
-    id: 'knapsack-sprayer',
-    title: 'Battery Operated Knapsack',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
-    description: 'Portable battery-powered sprayers for small areas and precision spraying. Lightweight and easy to operate.',
+    id: 'mounted-400l',
+    title: '400 Litre Mounted Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
+    description: 'The 400 Litre Mounted Sprayer is designed for larger farming operations requiring extended spraying capacity. This heavy-duty sprayer features a large HDPE tank with internal baffles to prevent liquid surge, extra-strong frame construction, and premium quality fittings. Ideal for large vineyards and orchards where efficiency and coverage are paramount. Includes advanced filtration system and easy-access drain valve.',
     specs: [
-      { label: 'Capacity', value: '16-20 Litres' },
-      { label: 'Type', value: 'Battery Operated' },
-      { label: 'Battery', value: '12V Rechargeable' },
-      { label: 'Pressure', value: '2-4 Bar' },
-      { label: 'Weight', value: 'Lightweight Design' },
-      { label: 'Usage', value: 'Small Farms, Gardens, Precision Spraying' }
+      { label: 'Tank Capacity', value: '400 Litres' },
+      { label: 'Tank Material', value: 'HDPE with Internal Baffles' },
+      { label: 'Frame', value: 'Extra Heavy Duty Steel' },
+      { label: 'Mounting', value: '3-Point Linkage (Cat II)' },
+      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
+      { label: 'Working Pressure', value: 'Up to 40 Bar' },
+      { label: 'Filtration', value: 'Multi-Stage Filtration' },
+      { label: 'Suitable Crops', value: 'Large Vineyards, Orchards, Plantations' }
+    ],
+    category: 'sprayers'
+  },
+  {
+    id: 'mounted-600l',
+    title: '600 Litre Mounted Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
+    description: 'The 600 Litre Mounted Sprayer is our largest mounted unit, designed for professional farming operations. Features include a massive HDPE tank with multiple baffles, industrial-grade steel frame, and professional-grade pump mounting. This sprayer is perfect for large-scale vineyards, citrus orchards, and plantation crops. Equipped with dual agitation system, multiple outlet ports, and heavy-duty quick-connect fittings.',
+    specs: [
+      { label: 'Tank Capacity', value: '600 Litres' },
+      { label: 'Tank Material', value: 'Industrial HDPE with Baffles' },
+      { label: 'Frame', value: 'Industrial Grade Steel' },
+      { label: 'Mounting', value: '3-Point Linkage (Cat II & III)' },
+      { label: 'Pump Compatibility', value: 'High Capacity Pumps' },
+      { label: 'Working Pressure', value: 'Up to 50 Bar' },
+      { label: 'Agitation', value: 'Dual Agitation System' },
+      { label: 'Suitable Crops', value: 'Large Scale Operations, Plantations' }
     ],
     category: 'sprayers'
   }
+];
+
+// ============================================
+// SPRAYERS - TRAILED
+// ============================================
+export const TRAILED_SPRAYERS: Product[] = [
+  {
+    id: 'trailed-citrus-plus',
+    title: 'Citrus Plus Trailed Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
+    description: 'The Citrus Plus Trailed Sprayer is specifically designed for citrus orchards and large fruit plantations. Features advanced air-blast technology with adjustable air deflectors for optimal spray penetration into dense canopy. The trailed design provides stability and allows for larger tank capacity. Equipped with axial flow fan, adjustable nozzle positions, and PTO-driven pump system.',
+    specs: [
+      { label: 'Tank Capacity', value: '400-600 Litres' },
+      { label: 'Type', value: 'Trailed Air-Blast' },
+      { label: 'Fan Type', value: 'Axial Flow Fan' },
+      { label: 'Fan Diameter', value: '800mm' },
+      { label: 'Air Output', value: '35,000 m³/hr' },
+      { label: 'Nozzle Positions', value: '12-16 Adjustable' },
+      { label: 'PTO Speed', value: '540 RPM' },
+      { label: 'Suitable Crops', value: 'Citrus, Mango, Large Orchards' }
+    ],
+    category: 'sprayers'
+  },
+  {
+    id: 'trailed-vineyard',
+    title: 'Vineyard Trailed Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
+    description: 'The Vineyard Trailed Sprayer is engineered specifically for grape vineyards with narrow row spacing. Features a compact design with excellent maneuverability, twin-fan air-blast system for thorough coverage of grape canopy from both sides. Includes adjustable air deflectors, multiple nozzle configurations, and precision pressure control.',
+    specs: [
+      { label: 'Tank Capacity', value: '400-500 Litres' },
+      { label: 'Type', value: 'Trailed Twin-Fan' },
+      { label: 'Fan Configuration', value: 'Twin Axial Fans' },
+      { label: 'Row Spacing', value: '6-10 feet' },
+      { label: 'Air Output', value: '25,000 m³/hr per side' },
+      { label: 'Nozzle Positions', value: '8-12 per side' },
+      { label: 'PTO Speed', value: '540 RPM' },
+      { label: 'Suitable Crops', value: 'Grapes, Berries, Trellis Crops' }
+    ],
+    category: 'sprayers'
+  },
+  {
+    id: 'trailed-orchard',
+    title: 'Orchard Trailed Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
+    description: 'The Orchard Trailed Sprayer is a versatile air-blast sprayer suitable for various orchard types including pomegranate, apple, and mixed fruit orchards. Features powerful centrifugal fan, adjustable air volume control, and flexible nozzle positioning. The robust construction ensures long service life even in demanding conditions.',
+    specs: [
+      { label: 'Tank Capacity', value: '500-800 Litres' },
+      { label: 'Type', value: 'Trailed Air-Blast' },
+      { label: 'Fan Type', value: 'Centrifugal Fan' },
+      { label: 'Air Volume', value: 'Adjustable' },
+      { label: 'Spray Range', value: 'Up to 15 meters' },
+      { label: 'Nozzle Positions', value: '14-20 Adjustable' },
+      { label: 'PTO Speed', value: '540/1000 RPM' },
+      { label: 'Suitable Crops', value: 'Pomegranate, Apple, Mixed Orchards' }
+    ],
+    category: 'sprayers'
+  }
+];
+
+// ============================================
+// SPRAYERS - KNAPSACK
+// ============================================
+export const KNAPSACK_SPRAYERS: Product[] = [
+  {
+    id: 'knapsack-battery-16l',
+    title: 'Battery Operated Knapsack (16L)',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
+    description: 'The 16 Litre Battery Operated Knapsack Sprayer is perfect for small farms, gardens, and precision spot spraying. Features a rechargeable 12V battery, adjustable pressure settings, and comfortable padded straps. Lightweight design reduces operator fatigue during extended use. Includes multiple nozzle options for different spray patterns.',
+    specs: [
+      { label: 'Tank Capacity', value: '16 Litres' },
+      { label: 'Battery', value: '12V 8Ah Rechargeable' },
+      { label: 'Charging Time', value: '6-8 Hours' },
+      { label: 'Working Time', value: '4-6 Hours' },
+      { label: 'Pressure', value: '2-4 Bar Adjustable' },
+      { label: 'Weight (Empty)', value: '5.5 kg' },
+      { label: 'Spray Lance', value: 'Telescopic' },
+      { label: 'Suitable For', value: 'Gardens, Small Farms, Spot Spraying' }
+    ],
+    category: 'sprayers'
+  },
+  {
+    id: 'knapsack-battery-20l',
+    title: 'Battery Operated Knapsack (20L)',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
+    description: 'The 20 Litre Battery Operated Knapsack Sprayer offers extended capacity for larger coverage areas. Features a powerful 12V battery system, ergonomic design with padded back support, and wide mouth opening for easy filling. Ideal for vegetable farms, nurseries, and medium-sized gardens.',
+    specs: [
+      { label: 'Tank Capacity', value: '20 Litres' },
+      { label: 'Battery', value: '12V 12Ah Rechargeable' },
+      { label: 'Charging Time', value: '8-10 Hours' },
+      { label: 'Working Time', value: '6-8 Hours' },
+      { label: 'Pressure', value: '2-5 Bar Adjustable' },
+      { label: 'Weight (Empty)', value: '6.5 kg' },
+      { label: 'Spray Lance', value: 'Telescopic with Extension' },
+      { label: 'Suitable For', value: 'Vegetable Farms, Nurseries, Gardens' }
+    ],
+    category: 'sprayers'
+  },
+  {
+    id: 'knapsack-manual',
+    title: 'Manual Knapsack Sprayer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
+    description: 'The Manual Knapsack Sprayer is a reliable and economical option for small-scale spraying needs. Features a hand-operated pump mechanism, durable plastic tank, and adjustable nozzle. No batteries or electricity required - perfect for remote areas or as a backup sprayer.',
+    specs: [
+      { label: 'Tank Capacity', value: '16 Litres' },
+      { label: 'Type', value: 'Manual Hand Pump' },
+      { label: 'Pressure', value: 'Up to 4 Bar' },
+      { label: 'Weight (Empty)', value: '3.5 kg' },
+      { label: 'Pump Type', value: 'Piston Pump' },
+      { label: 'Spray Lance', value: 'Fixed with Extension' },
+      { label: 'Nozzle', value: 'Adjustable Brass' },
+      { label: 'Suitable For', value: 'Home Gardens, Small Plots' }
+    ],
+    category: 'sprayers'
+  }
+];
+
+// Combined SPRAYERS array
+export const SPRAYERS: Product[] = [
+  ...MOUNTED_SPRAYERS,
+  ...TRAILED_SPRAYERS,
+  ...KNAPSACK_SPRAYERS
 ];
 
 // ============================================

@@ -1,33 +1,66 @@
 <section class="page-header">
   <div class="container">
-    <h1>Our Products</h1>
+    <h1>{{ pageTitle }}</h1>
+    <p class="page-subtitle">{{ pageSubtitle }}</p>
   </div>
 </section>
 
 <section class="products-section">
   <div class="container">
-    <mat-tab-group>
-      <mat-tab label="Sprayers">
-        <div class="tab-content">
-          <p class="tab-intro">
-            We offer various types of farm sprayers including Mounted Sprayers, Trailed Sprayers, 
-            and Battery Operated Knapsack Sprayers for crops like Grapes, Pomegranates, Oranges, and more.
-          </p>
-          <div class="product-grid">
-            @for (item of sprayers; track item.title) {
-              <mat-card class="product-card clickable" [routerLink]="['/product', item.id]">
-                <div class="card-image">
-                  <img [src]="item.image" [alt]="item.title">
-                </div>
-                <mat-card-content>
-                  <h3>{{ item.title }}</h3>
-                  <p>{{ item.description }}</p>
-                </mat-card-content>
-              </mat-card>
-            }
+    @if (currentCategory === 'mounted' || currentCategory === 'trailed' || currentCategory === 'knapsack') {
+      <!-- Show only sprayers for specific category -->
+      <div class="product-grid">
+        @for (item of sprayers; track item.id) {
+          <mat-card class="product-card clickable" [routerLink]="['/product', item.id]">
+            <div class="card-image">
+              <img [src]="item.image" [alt]="item.title">
+            </div>
+            <mat-card-content>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </mat-card-content>
+          </mat-card>
+        }
+      </div>
+    } @else if (currentCategory === 'equipment') {
+      <!-- Show equipment -->
+      <div class="product-grid four-col">
+        @for (item of equipment; track item.id) {
+          <mat-card class="product-card small clickable" [routerLink]="['/product', item.id]">
+            <div class="card-image small">
+              <img [src]="item.image" [alt]="item.title">
+            </div>
+            <mat-card-content>
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+            </mat-card-content>
+          </mat-card>
+        }
+      </div>
+    } @else {
+      <!-- Show all products with tabs -->
+      <mat-tab-group>
+        <mat-tab label="Sprayers">
+          <div class="tab-content">
+            <p class="tab-intro">
+              We offer various types of farm sprayers including Mounted Sprayers, Trailed Sprayers, 
+              and Battery Operated Knapsack Sprayers for crops like Grapes, Pomegranates, Oranges, and more.
+            </p>
+            <div class="product-grid">
+              @for (item of sprayers; track item.id) {
+                <mat-card class="product-card clickable" [routerLink]="['/product', item.id]">
+                  <div class="card-image">
+                    <img [src]="item.image" [alt]="item.title">
+                  </div>
+                  <mat-card-content>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                  </mat-card-content>
+                </mat-card>
+              }
+            </div>
           </div>
-        </div>
-      </mat-tab>
+        </mat-tab>
 
       <mat-tab label="Equipment">
         <div class="tab-content">
@@ -92,6 +125,7 @@
           </div>
         </div>
       </mat-tab>
-    </mat-tab-group>
+      </mat-tab-group>
+    }
   </div>
 </section>
