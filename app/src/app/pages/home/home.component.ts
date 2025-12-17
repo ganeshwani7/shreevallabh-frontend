@@ -20,14 +20,30 @@ export class HomeComponent {
   sliderImages = HOME_PAGE.sliderImages;
   features = FEATURES;
   
-  // Products from config
-  sprayers = SPRAYERS.map(s => ({
-    title: s.title,
-    image: s.image,
-    description: s.description.substring(0, 60) + '...'
-  }));
+  // Products from config with links
+  sprayers = [
+    {
+      title: 'Mounted Sprayers',
+      image: SPRAYERS[0].image,
+      description: 'Tractor-mounted sprayers for efficient crop spraying operations',
+      link: '/products/mounted'
+    },
+    {
+      title: 'Trailed Sprayers',
+      image: SPRAYERS[1].image,
+      description: 'High-capacity trailed sprayers for large orchards and vineyards',
+      link: '/products/trailed'
+    },
+    {
+      title: 'Knapsack Sprayers',
+      image: SPRAYERS[2].image,
+      description: 'Portable battery-powered sprayers for small areas',
+      link: '/products/knapsack'
+    }
+  ];
   
   equipment = EQUIPMENT.slice(0, 8).map(e => ({
+    id: e.id,
     title: e.title,
     image: e.image
   }));

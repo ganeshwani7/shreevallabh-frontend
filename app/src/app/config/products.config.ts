@@ -1,6 +1,6 @@
 /**
  * Products Configuration
- * 
+ *
  * This file contains all product data for the website.
  * To add/remove/modify products, edit this file.
  */
@@ -14,8 +14,10 @@ export interface Product {
   id: string;
   title: string;
   image: string;
+  images?: string[];  // Multiple images for special layouts
   description: string;
   specs?: ProductSpec[];
+  features?: string[];  // Feature bullet points
   category: 'sprayers' | 'equipment' | 'nozzles' | 'accessories';
 }
 
@@ -28,69 +30,28 @@ export const ASSETS_BASE_PATH = '/shreevallabh-frontend';
 export const MOUNTED_SPRAYERS: Product[] = [
   {
     id: 'mounted-200l',
-    title: '200 Litre Mounted Sprayer',
+    title: '200 Litre Mounted Sprayers',
     image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
-    description: 'The 200 Litre Mounted Sprayer is designed for efficient tractor-based crop spraying operations. It features a durable HDPE tank with UV stabilization, heavy-duty steel frame for mounting on tractors, and is compatible with various pump types. This sprayer is ideal for small to medium-sized vineyards, orchards, and row crops. The compact design allows easy maneuverability between rows while providing consistent spray coverage. Equipped with adjustable nozzle holders and pressure regulation system for precise application.',
+    images: [
+      `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
+      `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted2.jpg`
+    ],
+    description: '200 Litre Mounted Sprayers has Capacity 200 litres and Breakaway boom with winch for height adjustment. It has Hand wash tank 15 litres, 3 section pressure regulator with gauge and Single nozzle bodies anti-drip.',
+    features: [
+      'Chassis in cold deep galvanise',
+      'Fan conveyor unit is in stainless steel',
+      'Reverse fan with 2 speed gear box (First, Second & Nutral)',
+      'Comet APS71 litres pumps',
+      'Imported from Spain'
+    ],
     specs: [
       { label: 'Tank Capacity', value: '200 Litres' },
-      { label: 'Tank Material', value: 'HDPE with UV Stabilization' },
-      { label: 'Frame', value: 'Heavy Duty Steel, Powder Coated' },
-      { label: 'Mounting', value: '3-Point Linkage (Cat I & II)' },
-      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
-      { label: 'Working Pressure', value: 'Up to 40 Bar' },
-      { label: 'Agitation', value: 'Hydraulic Agitator' },
-      { label: 'Suitable Crops', value: 'Grapes, Pomegranates, Oranges, Vegetables' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'mounted-300l',
-    title: '300 Litre Mounted Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
-    description: 'The 300 Litre Mounted Sprayer offers increased capacity for medium-sized farming operations. Built with a robust HDPE tank and reinforced steel frame, this sprayer provides excellent durability and reliability. Features include an integrated pressure gauge, multiple outlet connections, and easy-fill lid design. The sprayer is designed for efficient coverage of vineyards, orchards, and field crops with minimal refilling stops.',
-    specs: [
-      { label: 'Tank Capacity', value: '300 Litres' },
-      { label: 'Tank Material', value: 'HDPE with UV Stabilization' },
-      { label: 'Frame', value: 'Reinforced Steel Frame' },
-      { label: 'Mounting', value: '3-Point Linkage (Cat I & II)' },
-      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
-      { label: 'Working Pressure', value: 'Up to 40 Bar' },
-      { label: 'Agitation', value: 'Hydraulic Agitator' },
-      { label: 'Suitable Crops', value: 'Grapes, Pomegranates, Citrus, Field Crops' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'mounted-400l',
-    title: '400 Litre Mounted Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
-    description: 'The 400 Litre Mounted Sprayer is designed for larger farming operations requiring extended spraying capacity. This heavy-duty sprayer features a large HDPE tank with internal baffles to prevent liquid surge, extra-strong frame construction, and premium quality fittings. Ideal for large vineyards and orchards where efficiency and coverage are paramount. Includes advanced filtration system and easy-access drain valve.',
-    specs: [
-      { label: 'Tank Capacity', value: '400 Litres' },
-      { label: 'Tank Material', value: 'HDPE with Internal Baffles' },
-      { label: 'Frame', value: 'Extra Heavy Duty Steel' },
-      { label: 'Mounting', value: '3-Point Linkage (Cat II)' },
-      { label: 'Pump Compatibility', value: 'Diaphragm/Piston Pump' },
-      { label: 'Working Pressure', value: 'Up to 40 Bar' },
-      { label: 'Filtration', value: 'Multi-Stage Filtration' },
-      { label: 'Suitable Crops', value: 'Large Vineyards, Orchards, Plantations' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'mounted-600l',
-    title: '600 Litre Mounted Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/200lit_mounted1.jpg`,
-    description: 'The 600 Litre Mounted Sprayer is our largest mounted unit, designed for professional farming operations. Features include a massive HDPE tank with multiple baffles, industrial-grade steel frame, and professional-grade pump mounting. This sprayer is perfect for large-scale vineyards, citrus orchards, and plantation crops. Equipped with dual agitation system, multiple outlet ports, and heavy-duty quick-connect fittings.',
-    specs: [
-      { label: 'Tank Capacity', value: '600 Litres' },
-      { label: 'Tank Material', value: 'Industrial HDPE with Baffles' },
-      { label: 'Frame', value: 'Industrial Grade Steel' },
-      { label: 'Mounting', value: '3-Point Linkage (Cat II & III)' },
-      { label: 'Pump Compatibility', value: 'High Capacity Pumps' },
-      { label: 'Working Pressure', value: 'Up to 50 Bar' },
-      { label: 'Agitation', value: 'Dual Agitation System' },
-      { label: 'Suitable Crops', value: 'Large Scale Operations, Plantations' }
+      { label: 'Hand Wash Tank', value: '15 Litres' },
+      { label: 'Boom Type', value: 'Breakaway with Winch' },
+      { label: 'Pressure Regulator', value: '3 Section with Gauge' },
+      { label: 'Nozzle Bodies', value: 'Single Anti-Drip' },
+      { label: 'Pump', value: 'Comet APS71' },
+      { label: 'Origin', value: 'Imported from Spain' }
     ],
     category: 'sprayers'
   }
@@ -102,9 +63,13 @@ export const MOUNTED_SPRAYERS: Product[] = [
 export const TRAILED_SPRAYERS: Product[] = [
   {
     id: 'trailed-citrus-plus',
-    title: 'Citrus Plus Trailed Sprayer',
+    title: 'Basic / Dominator / Citrus-Plus',
     image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
-    description: 'The Citrus Plus Trailed Sprayer is specifically designed for citrus orchards and large fruit plantations. Features advanced air-blast technology with adjustable air deflectors for optimal spray penetration into dense canopy. The trailed design provides stability and allows for larger tank capacity. Equipped with axial flow fan, adjustable nozzle positions, and PTO-driven pump system.',
+    images: [
+      `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
+      `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus2.jpg`
+    ],
+    description: 'We offer three different models. It is a Tractor-trailed Mist Blowers. Our Basic mist blower is equipped with a single 700/800mm turbine with 8 blades and intended for use in grapevine, fruit and almond trees. Dominator, on the other hand, is equipped with a dual channel 800/900mm turbine with 10 blades and designed for use in fruit and almond trees. Finally, Circuit Plus is specially intended for phytosanitary control of citrus trees and it is built with a dual 800/900mm turbine and a double knozzle-holder structure (28 jets).',
     specs: [
       { label: 'Tank Capacity', value: '400-600 Litres' },
       { label: 'Type', value: 'Trailed Air-Blast' },
@@ -116,40 +81,6 @@ export const TRAILED_SPRAYERS: Product[] = [
       { label: 'Suitable Crops', value: 'Citrus, Mango, Large Orchards' }
     ],
     category: 'sprayers'
-  },
-  {
-    id: 'trailed-vineyard',
-    title: 'Vineyard Trailed Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
-    description: 'The Vineyard Trailed Sprayer is engineered specifically for grape vineyards with narrow row spacing. Features a compact design with excellent maneuverability, twin-fan air-blast system for thorough coverage of grape canopy from both sides. Includes adjustable air deflectors, multiple nozzle configurations, and precision pressure control.',
-    specs: [
-      { label: 'Tank Capacity', value: '400-500 Litres' },
-      { label: 'Type', value: 'Trailed Twin-Fan' },
-      { label: 'Fan Configuration', value: 'Twin Axial Fans' },
-      { label: 'Row Spacing', value: '6-10 feet' },
-      { label: 'Air Output', value: '25,000 m³/hr per side' },
-      { label: 'Nozzle Positions', value: '8-12 per side' },
-      { label: 'PTO Speed', value: '540 RPM' },
-      { label: 'Suitable Crops', value: 'Grapes, Berries, Trellis Crops' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'trailed-orchard',
-    title: 'Orchard Trailed Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/Citrus-Plus1.jpg`,
-    description: 'The Orchard Trailed Sprayer is a versatile air-blast sprayer suitable for various orchard types including pomegranate, apple, and mixed fruit orchards. Features powerful centrifugal fan, adjustable air volume control, and flexible nozzle positioning. The robust construction ensures long service life even in demanding conditions.',
-    specs: [
-      { label: 'Tank Capacity', value: '500-800 Litres' },
-      { label: 'Type', value: 'Trailed Air-Blast' },
-      { label: 'Fan Type', value: 'Centrifugal Fan' },
-      { label: 'Air Volume', value: 'Adjustable' },
-      { label: 'Spray Range', value: 'Up to 15 meters' },
-      { label: 'Nozzle Positions', value: '14-20 Adjustable' },
-      { label: 'PTO Speed', value: '540/1000 RPM' },
-      { label: 'Suitable Crops', value: 'Pomegranate, Apple, Mixed Orchards' }
-    ],
-    category: 'sprayers'
   }
 ];
 
@@ -159,52 +90,31 @@ export const TRAILED_SPRAYERS: Product[] = [
 export const KNAPSACK_SPRAYERS: Product[] = [
   {
     id: 'knapsack-battery-16l',
-    title: 'Battery Operated Knapsack (16L)',
+    title: 'Battery Operated Knapsack Sprayer',
     image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
-    description: 'The 16 Litre Battery Operated Knapsack Sprayer is perfect for small farms, gardens, and precision spot spraying. Features a rechargeable 12V battery, adjustable pressure settings, and comfortable padded straps. Lightweight design reduces operator fatigue during extended use. Includes multiple nozzle options for different spray patterns.',
+    images: [
+      `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
+      `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer01.jpg`
+    ],
+    description: 'Best quality European Knapsack now available in quantity. Long life battery & durability, easy to handling, comparative good coverage as well best spray performance! Also maintenance free.',
+    features: [
+      'Suitable for spraying in paddy, Vegetables, Orchards and Plantations',
+      'Adjustable Nozzlet',
+      'Carrying Handgrip',
+      '1-4 Bar Pressure Regulator',
+      'Charging Plug',
+      'Battery Level LED',
+      'Convenient Handle'
+    ],
     specs: [
       { label: 'Tank Capacity', value: '16 Litres' },
       { label: 'Battery', value: '12V 8Ah Rechargeable' },
       { label: 'Charging Time', value: '6-8 Hours' },
       { label: 'Working Time', value: '4-6 Hours' },
-      { label: 'Pressure', value: '2-4 Bar Adjustable' },
+      { label: 'Pressure', value: '1-4 Bar Adjustable' },
       { label: 'Weight (Empty)', value: '5.5 kg' },
       { label: 'Spray Lance', value: 'Telescopic' },
       { label: 'Suitable For', value: 'Gardens, Small Farms, Spot Spraying' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'knapsack-battery-20l',
-    title: 'Battery Operated Knapsack (20L)',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
-    description: 'The 20 Litre Battery Operated Knapsack Sprayer offers extended capacity for larger coverage areas. Features a powerful 12V battery system, ergonomic design with padded back support, and wide mouth opening for easy filling. Ideal for vegetable farms, nurseries, and medium-sized gardens.',
-    specs: [
-      { label: 'Tank Capacity', value: '20 Litres' },
-      { label: 'Battery', value: '12V 12Ah Rechargeable' },
-      { label: 'Charging Time', value: '8-10 Hours' },
-      { label: 'Working Time', value: '6-8 Hours' },
-      { label: 'Pressure', value: '2-5 Bar Adjustable' },
-      { label: 'Weight (Empty)', value: '6.5 kg' },
-      { label: 'Spray Lance', value: 'Telescopic with Extension' },
-      { label: 'Suitable For', value: 'Vegetable Farms, Nurseries, Gardens' }
-    ],
-    category: 'sprayers'
-  },
-  {
-    id: 'knapsack-manual',
-    title: 'Manual Knapsack Sprayer',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/knapsack-sprayer02.jpg`,
-    description: 'The Manual Knapsack Sprayer is a reliable and economical option for small-scale spraying needs. Features a hand-operated pump mechanism, durable plastic tank, and adjustable nozzle. No batteries or electricity required - perfect for remote areas or as a backup sprayer.',
-    specs: [
-      { label: 'Tank Capacity', value: '16 Litres' },
-      { label: 'Type', value: 'Manual Hand Pump' },
-      { label: 'Pressure', value: 'Up to 4 Bar' },
-      { label: 'Weight (Empty)', value: '3.5 kg' },
-      { label: 'Pump Type', value: 'Piston Pump' },
-      { label: 'Spray Lance', value: 'Fixed with Extension' },
-      { label: 'Nozzle', value: 'Adjustable Brass' },
-      { label: 'Suitable For', value: 'Home Gardens, Small Plots' }
     ],
     category: 'sprayers'
   }
@@ -222,24 +132,28 @@ export const SPRAYERS: Product[] = [
 // ============================================
 export const EQUIPMENT: Product[] = [
   {
-    id: 'diaphragm-pump',
-    title: 'Comet 71 LT Diaphragm Pump',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special1.jpg`,
-    description: 'High-quality Italian diaphragm pump for reliable spraying performance. Comet pumps are known for durability and efficiency.',
+    id: 'comet-71-lt',
+    title: 'Comet APS 71 Diaphragm Pump',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/comet71.jpg`,
+    description: 'High-quality Italian diaphragm pump featuring DURAphragm Technology™ for reliable spraying performance. Comet pumps are known for durability and efficiency.',
     specs: [
-      { label: 'Brand', value: 'Comet (Italy)' },
-      { label: 'Model', value: '71 LT' },
-      { label: 'Type', value: 'Diaphragm Pump' },
-      { label: 'Flow Rate', value: '71 L/min' },
-      { label: 'Max Pressure', value: '40 Bar' },
-      { label: 'Certification', value: 'ISO, CE' }
+      { label: 'Max Pressure', value: '725 PSI (50 Bar)' },
+      { label: 'Max Flow', value: '18.8 GPM (71 L/min)' },
+      { label: 'Max RPM', value: '550' },
+      { label: 'Suction Diameter', value: 'Ø 35mm' },
+      { label: 'Delivery Diameter', value: 'G ½" M, Ø 10mm' },
+      { label: 'Pump Material', value: 'Anodized Aluminum' },
+      { label: 'Diaphragm/Seal Material', value: 'Buna' },
+      { label: 'Oil Capacity', value: '40.6 fl oz' },
+      { label: 'Weight', value: '40.6 lbs' },
+      { label: 'DURAphragm Technology™', value: 'Yes' }
     ],
     category: 'equipment'
   },
   {
     id: 'orion-controller',
     title: 'Orion Brass Controller',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special2.jpg`,
+    image: `${ASSETS_BASE_PATH}/assets/images/services/orion-brass-controller.jpg`,
     description: 'Premium brass controller for precise pressure regulation. Italian quality for professional spraying applications.',
     specs: [
       { label: 'Brand', value: 'Orion (Italy)' },
@@ -254,22 +168,24 @@ export const EQUIPMENT: Product[] = [
   {
     id: 'vdr-controller',
     title: 'VDR 50 Controller',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special4.jpg`,
-    description: 'Advanced controller for professional spraying applications. Provides precise control over spray operations.',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/vdr-50-controller.jpg`,
+    description: 'Advanced control unit for medium and high pressure spraying applications. Provides precise control over spray operations.',
     specs: [
-      { label: 'Model', value: 'VDR 50' },
-      { label: 'Type', value: 'Flow Controller' },
-      { label: 'Material', value: 'High-Grade Brass' },
-      { label: 'Pressure Range', value: '0-50 Bar' },
-      { label: 'Usage', value: 'Professional Spraying' },
-      { label: 'Certification', value: 'ISO' }
+      { label: 'AR Code', value: '950' },
+      { label: 'Category', value: 'Control unit medium and high pressure' },
+      { label: 'Delivery', value: '130 L/min (34.3 GPM)' },
+      { label: 'Pressure', value: '50 bar (725 PSI)' },
+      { label: 'Dimensions (L×H×W)', value: '237×308×300 mm' },
+      { label: 'Suction', value: '3/4" G' },
+      { label: 'Outlet', value: '3 x Ø 10' },
+      { label: 'Max Temperature', value: '60°C' }
     ],
     category: 'equipment'
   },
   {
     id: 'volvolmeccanica-gun',
     title: 'Volvolmeccanica Gun',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special3.jpg`,
+    image: `${ASSETS_BASE_PATH}/assets/images/services/valvomecanica.jpg`,
     description: 'Italian-made spray gun for accurate and efficient spraying. Premium quality from Volvolmeccanica.',
     specs: [
       { label: 'Brand', value: 'Volvolmeccanica (Italy)' },
@@ -282,9 +198,42 @@ export const EQUIPMENT: Product[] = [
     category: 'equipment'
   },
   {
+    id: 'piston-pump',
+    title: 'Grease Free Piston Pump',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/piston-pump.jpg`,
+    description: 'Maintenance-friendly piston pump design. No grease required for smooth operation. High efficient agricultural pump.',
+    specs: [
+      { label: 'Usage', value: 'Agriculture' },
+      { label: 'Sprayer Type', value: 'Pump' },
+      { label: 'Feature', value: 'High Efficient' },
+      { label: 'Color', value: 'Grey' },
+      { label: 'Flow', value: '17.5 L/min' },
+      { label: 'RPM', value: '900 r.p.m' },
+      { label: 'Model Number', value: '524' },
+      { label: 'Diameter', value: '22 inch' },
+      { label: 'Power', value: '2.2 Kw' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'italian-spray-gun',
+    title: 'Italian Spray Gun',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/spraygun.jpg`,
+    description: 'High-quality Italian spray gun for precision application. Designed for professional agricultural spraying.',
+    specs: [
+      { label: 'Model No.', value: 'B-16' },
+      { label: 'Material', value: 'Sprayer Parts' },
+      { label: 'Type', value: 'Brass PP, SS Pipe' },
+      { label: 'Technics', value: 'Labeling' },
+      { label: 'Power Supply', value: 'Sprayer' },
+      { label: 'Volume', value: '500ml' }
+    ],
+    category: 'equipment'
+  },
+  {
     id: 'brass-filter',
     title: 'Brass Filter',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special8.jpg`,
+    image: `${ASSETS_BASE_PATH}/assets/images/services/brass.jpg`,
     description: 'Durable brass filter for clean, clog-free operation. Essential for maintaining spray quality.',
     specs: [
       { label: 'Material', value: 'Brass' },
@@ -298,15 +247,14 @@ export const EQUIPMENT: Product[] = [
   },
   {
     id: 'pressure-meter',
-    title: 'Pressure Meter',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special5.jpg`,
+    title: 'Pressure Meter / Glycerine Gauge',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/pressure-meter1.jpg`,
     description: 'Accurate pressure measurement for optimal spraying. Essential for monitoring spray system performance.',
     specs: [
-      { label: 'Type', value: 'Analog/Digital' },
-      { label: 'Range', value: '0-60 Bar' },
-      { label: 'Accuracy', value: 'High Precision' },
-      { label: 'Connection', value: 'Standard Fitting' },
-      { label: 'Display', value: 'Clear Reading' },
+      { label: 'Glycerine Pressure Gauge', value: '63 mm' },
+      { label: 'Glycerine Manometer', value: '100mm' },
+      { label: 'Glycerine Pressure Gauge', value: '100 mm' },
+      { label: 'Type', value: 'Glycerine Filled' },
       { label: 'Usage', value: 'Pressure Monitoring' }
     ],
     category: 'equipment'
@@ -314,30 +262,164 @@ export const EQUIPMENT: Product[] = [
   {
     id: 'fan-assembly',
     title: 'Fan Assembly',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special6.jpg`,
+    image: `${ASSETS_BASE_PATH}/assets/images/services/fan-acceseries.jpg`,
     description: 'High-performance fan assembly for air-blast sprayers. Provides powerful air flow for effective coverage.',
     specs: [
-      { label: 'Type', value: 'Axial Fan' },
-      { label: 'Material', value: 'Aluminum/Steel' },
-      { label: 'Air Output', value: 'High Volume' },
-      { label: 'Compatibility', value: 'Air Blast Sprayers' },
-      { label: 'Noise Level', value: 'Optimized' },
-      { label: 'Usage', value: 'Orchard Spraying' }
+      { label: 'Pressure', value: 'High Pressure' },
+      { label: 'Power Source', value: 'Tractor' },
+      { label: 'Blower Type', value: 'High Volume' },
+      { label: 'Power', value: '24 hp' },
+      { label: 'Material', value: 'Stainless Steel' }
     ],
     category: 'equipment'
   },
   {
-    id: 'piston-pump',
-    title: 'Grease Free Piston Pump',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/piston_pump-1.jpg`,
-    description: 'Maintenance-friendly piston pump design. No grease required for smooth operation.',
+    id: 'filter',
+    title: 'Filter',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/filter.jpg`,
+    description: 'High-quality filter with special features for optimal filtration performance.',
+    features: [
+      'Outside - Inside Filteration',
+      'For Upside Installation',
+      'Bigger Port For Water Drainage',
+      'Special SS-316 Single Mesh For Strength And Corrosion Resistance',
+      'Provided With Specially Designed Vacuum breaker Valve For Quick Drain And To Avoid Vacuum / Air Trapping',
+      'The Filters Are Made From Special Chemically Banded Polymer Which Are Weather Resistant',
+      'Specially Designed Long Handle For Easy Clamp Opening & Closing'
+    ],
     specs: [
-      { label: 'Type', value: 'Piston Pump' },
-      { label: 'Feature', value: 'Grease Free' },
-      { label: 'Maintenance', value: 'Low Maintenance' },
-      { label: 'Material', value: 'High-Grade Steel' },
-      { label: 'Durability', value: 'Long Lasting' },
+      { label: 'Mesh Material', value: 'SS-316' },
+      { label: 'Body Material', value: 'Chemically Banded Polymer' },
+      { label: 'Installation', value: 'Upside' },
+      { label: 'Feature', value: 'Weather Resistant' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'tank-mixer',
+    title: 'Tank Mixer',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/tank-mixer.jpg`,
+    description: 'Efficient mixing system for spray solutions. Ensures uniform mixture for consistent application.',
+    specs: [
+      { label: 'Type', value: 'Hydraulic Mixer' },
+      { label: 'Material', value: 'Stainless Steel' },
+      { label: 'Compatibility', value: 'All Tank Sizes' },
+      { label: 'Function', value: 'Agitation/Mixing' },
+      { label: 'Installation', value: 'Easy Mount' },
+      { label: 'Usage', value: 'Chemical Mixing' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'wide-angle-cross',
+    title: 'Wide Angle Cross',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/wide-angle-cross.jpg`,
+    description: 'Wide angle cross joint for PTO shaft applications. Essential component for tractor-mounted equipment.',
+    specs: [
+      { label: 'OEM', value: '35.06.00' },
+      { label: 'Lubrication Point', value: 'Cap' },
+      { label: 'Wide Angle Type', value: 'EUCV' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'high-pressure-gun',
+    title: 'High Pressure Gun',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/high-pressure.jpg`,
+    description: 'Heavy-duty gun for high-pressure applications. Built for demanding professional use.',
+    specs: [
+      { label: 'Type', value: 'High Pressure' },
+      { label: 'Material', value: 'Brass/Steel' },
+      { label: 'Max Pressure', value: '50+ Bar' },
+      { label: 'Trigger', value: 'Ergonomic Design' },
+      { label: 'Connection', value: 'Quick Connect' },
+      { label: 'Usage', value: 'Heavy Duty Spraying' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'nozzle-accessories',
+    title: 'Nozzle Accessories',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/nozel-acceseries.jpg`,
+    description: 'Complete range of nozzle accessories for sprayer maintenance and enhanced functionality.',
+    specs: [
+      { label: 'Type', value: 'Nozzle Accessories' },
+      { label: 'Includes', value: 'Caps, Filters, Gaskets' },
+      { label: 'Compatibility', value: 'All Nozzle Types' },
+      { label: 'Usage', value: 'Sprayer Maintenance' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'nozzle-point',
+    title: 'Nozzle Point',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/nozzle-point.jpg`,
+    description: 'Precision nozzle point for accurate spray application. Essential component for spray systems.',
+    specs: [
+      { label: 'Type', value: 'Nozzle Point' },
+      { label: 'Material', value: 'Brass' },
+      { label: 'Usage', value: 'Spray Systems' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'sprayer-tank-accessories',
+    title: 'Sprayer Tank Accessories',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/sprayertank.jpg`,
+    description: 'Complete range of sprayer tank accessories for agricultural applications. Durable construction for long-lasting use.',
+    specs: [
+      { label: 'Material', value: 'HDPE' },
+      { label: 'Type', value: 'Tank Accessories' },
+      { label: 'Feature', value: 'UV Stabilized' },
       { label: 'Usage', value: 'Agricultural Spraying' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'wide-angle-shaft',
+    title: 'Wide Angle Shaft',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/wide-angle.jpg`,
+    description: 'Wide angle shaft for PTO applications. Essential component for tractor-mounted equipment with flexible angle requirements.',
+    specs: [
+      { label: 'Power @ 540 RPM', value: '35' },
+      { label: 'Safety Clutch (Transmitted)', value: 'Spring ball' },
+      { label: 'Torque @ 540 RPM', value: '460' },
+      { label: 'Safety Clutch (Transferred)', value: 'Snap Pin' },
+      { label: 'Power @ 1000 RPM', value: '55' },
+      { label: 'Max. Length (Temporary)', value: '1146 mm' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'pto-shaft-accessories',
+    title: 'PTO Shaft Accessories',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/pto-shaft.jpg`,
+    description: 'Power take-off accessories for tractor-mounted sprayers. Essential for connecting sprayer to tractor PTO.',
+    specs: [
+      { label: 'Model NO.', value: 'CROSS' },
+      { label: 'Usage', value: 'Agricultural Products Processing, Farmland Infrastructure' },
+      { label: 'Wide Angle Joint', value: '30.2 × 80mm' },
+      { label: 'Transport Package', value: 'Carton, Wooden Pallet' },
+      { label: 'Type', value: 'Shaft' },
+      { label: 'Material', value: 'Steel' },
+      { label: 'Certification', value: 'ISO, ICE' }
+    ],
+    category: 'equipment'
+  },
+  {
+    id: 'pruning-secateur',
+    title: 'Falcon Economy M2 - Pruning Secateur',
+    image: `${ASSETS_BASE_PATH}/assets/images/projects/pruning_secateur.jpg`,
+    description: 'Professional pruning tool for orchard maintenance. Sharp and durable for clean cuts.',
+    specs: [
+      { label: 'Brand', value: 'Falcon' },
+      { label: 'Model', value: 'Economy M2' },
+      { label: 'Type', value: 'Bypass Secateur' },
+      { label: 'Blade', value: 'High Carbon Steel' },
+      { label: 'Handle', value: 'Ergonomic Grip' },
+      { label: 'Cut Capacity', value: 'Up to 25mm' },
+      { label: 'Lock', value: 'Safety Lock' },
+      { label: 'Usage', value: 'Pruning, Trimming' }
     ],
     category: 'equipment'
   }
@@ -350,38 +432,38 @@ export const NOZZLES: Product[] = [
   {
     id: 'm82-nozzle',
     title: 'M 82 Volvolmeccanica Nozzle',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special3.jpg`,
-    description: 'Premium Italian nozzle for fine spray patterns. Volvolmeccanica quality for professional use.',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/m82.jpg`,
+    description: 'Jet complete with ring nuts, lock nut with O-ring and nozzles, with a maximum operating pressure of 40 bar, usable on atomizers. The materials used, all of high quality, are: brass, stainless steel, ceramic, NBR. Possibility of using two selectable nozzles at the same time. Four "Open" positions inclined 15° from the vertical, each position is marked by a click. Non-drip, resistant and effective at low and high pressure.',
     specs: [
-      { label: 'Brand', value: 'Volvolmeccanica (Italy)' },
-      { label: 'Model', value: 'M 82' },
-      { label: 'Type', value: 'Hollow Cone' },
-      { label: 'Pattern', value: 'Fine Spray' },
-      { label: 'Material', value: 'Brass' },
-      { label: 'Usage', value: 'Precision Spraying' }
+      { label: 'Usage/Application', value: 'Agriculture' },
+      { label: 'Material', value: 'Brass, Stainless Steel, Ceramic, NBR' },
+      { label: 'Brand', value: 'Volvolmeccanica' },
+      { label: 'Max Operating Pressure', value: '40 bar' },
+      { label: 'Customisation', value: 'Not Customised' },
+      { label: 'Finishing', value: 'Polished' }
     ],
     category: 'nozzles'
   },
   {
     id: 'm65-nozzle',
-    title: 'M 65 Nozzle',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special7.jpg`,
-    description: 'Versatile nozzle for various spraying applications. Reliable performance for different crops.',
+    title: 'M 65 Volvolmeccanica Nozzle',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/m65.jpg`,
+    description: 'Jet complete with ring nuts, lock nut and nozzles, with a maximum operating pressure of 40 bar, usable on atomizers. The materials used, all of high quality, completely MADE IN ITALY, are Brass, NBR, Ceramic, Stainless Steel. Two selectable nozzles with closing positions and reduced dimensions. Two "Open" positions, inclined 15° from the vertical, each position is marked by a click. Non-drip, resistant and effective at low and high pressure.',
     specs: [
       { label: 'Model', value: 'M 65' },
-      { label: 'Type', value: 'Multi-Purpose' },
-      { label: 'Pattern', value: 'Adjustable' },
-      { label: 'Material', value: 'Brass' },
-      { label: 'Flow Rate', value: 'Variable' },
-      { label: 'Usage', value: 'General Spraying' }
+      { label: 'Brand', value: 'Volvolmeccanica' },
+      { label: 'Material', value: 'Brass, NBR, Ceramic, Stainless Steel' },
+      { label: 'Max Operating Pressure', value: '40 bar' },
+      { label: 'Origin', value: 'Made in Italy' },
+      { label: 'Usage', value: 'Air Blast Sprayers' }
     ],
     category: 'nozzles'
   },
   {
-    id: 'albuz-ceramic',
+    id: 'albuz-ceramic-tip',
     title: 'ALBUZ Ceramic Tip',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/albuz-ceramic-tip.jpg`,
-    description: 'Long-lasting ceramic tip for consistent spray quality. ALBUZ nozzles are industry standard for precision.',
+    image: `${ASSETS_BASE_PATH}/assets/images/projects/albuz-ceramic-tip1.jpg`,
+    description: 'Long-lasting ceramic tip for consistent spray quality. ALBUZ nozzles are industry standard for precision spraying.',
     specs: [
       { label: 'Brand', value: 'ALBUZ' },
       { label: 'Material', value: 'Ceramic' },
@@ -395,8 +477,8 @@ export const NOZZLES: Product[] = [
   {
     id: 'atr60-yellow',
     title: 'ATR 60 Yellow',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/atr60-yellow.jpg`,
-    description: 'Color-coded nozzle for specific flow rates. Yellow coding indicates standard flow rate.',
+    image: `${ASSETS_BASE_PATH}/assets/images/projects/atr60-yellow1.jpg`,
+    description: 'Color-coded nozzle for specific flow rates. Yellow coding indicates standard flow rate for easy identification.',
     specs: [
       { label: 'Model', value: 'ATR 60' },
       { label: 'Color Code', value: 'Yellow' },
@@ -408,15 +490,43 @@ export const NOZZLES: Product[] = [
     category: 'nozzles'
   },
   {
+    id: 'atr60',
+    title: 'ATR 60',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/atr60.jpg`,
+    description: 'Compact dimensions, designed for easy cleaning and disassembly. Opens and closes with a "click". Three orifices give a good degree of pulverization, already almost at an 80° angle, even at low pressure (or 60° depending on the model).',
+    specs: [
+      { label: 'Model', value: 'ATR 60' },
+      { label: 'Type', value: 'Hollow Cone' },
+      { label: 'Spray Angle', value: '60° / 80°' },
+      { label: 'Design', value: 'Compact, Easy Cleaning' },
+      { label: 'Orifices', value: '3 Channels' },
+      { label: 'Usage', value: 'Orchards, Vineyards' }
+    ],
+    category: 'nozzles'
+  },
+  {
+    id: 'atf80',
+    title: 'ATF 80 Full Cone Nozzle',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/ATF80.jpg`,
+    description: 'Full cone nozzle for orchard and vineyard applications. Provides excellent coverage.',
+    specs: [
+      { label: 'Type', value: 'Full Cone Nozzle' },
+      { label: 'Category', value: 'Orchard, Vineyard' },
+      { label: 'Recommended Pressure', value: '3-10 bar (43.5-145 PSI)' },
+      { label: 'Angle', value: '80°' },
+      { label: 'Max Pressure', value: '20 bar (290 PSI)' },
+      { label: 'Max Flow', value: '1.73 Lit/m (0.45 US gpm)' }
+    ],
+    category: 'nozzles'
+  },
+  {
     id: 'atr-disk',
-    title: 'ATR 80 Disc',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/atr_disk-1.jpg`,
+    title: 'ATR Disc',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/atrdisk.jpg`,
     description: 'Disc-type nozzle for hollow cone spray patterns. Ideal for orchard and vineyard applications.',
     specs: [
-      { label: 'Model', value: 'ATR 80' },
       { label: 'Type', value: 'Disc Nozzle' },
       { label: 'Pattern', value: 'Hollow Cone' },
-      { label: 'Spray Angle', value: '80°' },
       { label: 'Material', value: 'Brass/Ceramic' },
       { label: 'Usage', value: 'Orchards, Vineyards' }
     ],
@@ -425,116 +535,27 @@ export const NOZZLES: Product[] = [
   {
     id: 'bell-nozzle',
     title: 'Sprayer Bell Nozzle',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/ball.jpg`,
-    description: 'Bell-shaped nozzle for wide coverage. Ideal for broad area spraying applications.',
+    image: `${ASSETS_BASE_PATH}/assets/images/services/Sprayer-Bell.jpg`,
+    description: 'Sprayer Bell Nozzle is a precision device that facilitates dispersion of liquid into a spray. Sprayer Bell Nozzles are used for three purposes: to distribute a liquid over an area, to increase liquid surface area, and create impact force on a solid surface.',
     specs: [
-      { label: 'Type', value: 'Bell Nozzle' },
-      { label: 'Pattern', value: 'Wide Coverage' },
-      { label: 'Material', value: 'Brass/Plastic' },
-      { label: 'Spray Angle', value: 'Wide' },
-      { label: 'Flow Rate', value: 'High Volume' },
-      { label: 'Usage', value: 'Broad Area Spraying' }
+      { label: 'Usage/Application', value: 'Agriculture' },
+      { label: 'Material', value: 'Brass, Plastic' },
+      { label: 'Brand', value: 'Valvomeccanica' },
+      { label: 'Model Name/Number', value: 'M-0 bar61' },
+      { label: 'Pressure', value: '25 bar' },
+      { label: 'Orifice Diameter', value: '3-4 mm' },
+      { label: 'Thread Size', value: '3/4" BSPT' },
+      { label: 'Spray Angle', value: '60 Degree' },
+      { label: 'Weight', value: '200-300 g' }
     ],
     category: 'nozzles'
   }
 ];
 
 // ============================================
-// ACCESSORIES
+// ACCESSORIES (Empty - items moved to EQUIPMENT)
 // ============================================
-export const ACCESSORIES: Product[] = [
-  {
-    id: 'pto-accessories',
-    title: 'PTO Shaft Accessories',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special6.jpg`,
-    description: 'Power take-off accessories for tractor-mounted sprayers. Essential for connecting sprayer to tractor PTO.',
-    specs: [
-      { label: 'Model', value: 'CROSS' },
-      { label: 'Usage', value: 'Agricultural Products Processing, Farmland Infrastructure' },
-      { label: 'Wide Angle Joint', value: '30.2 × 80mm' },
-      { label: 'Transport Package', value: 'Carton, Wooden Pallet' },
-      { label: 'Type', value: 'Shaft' },
-      { label: 'Material', value: 'Steel' },
-      { label: 'Certification', value: 'ISO, ICE' }
-    ],
-    category: 'accessories'
-  },
-  {
-    id: 'tank-mixer',
-    title: 'Tank Mixer',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/tank_mixer-1.jpg`,
-    description: 'Efficient mixing system for spray solutions. Ensures uniform mixture for consistent application.',
-    specs: [
-      { label: 'Type', value: 'Hydraulic Mixer' },
-      { label: 'Material', value: 'Stainless Steel' },
-      { label: 'Compatibility', value: 'All Tank Sizes' },
-      { label: 'Function', value: 'Agitation/Mixing' },
-      { label: 'Installation', value: 'Easy Mount' },
-      { label: 'Usage', value: 'Chemical Mixing' }
-    ],
-    category: 'accessories'
-  },
-  {
-    id: 'tank-accessories',
-    title: 'Sprayer Tank Accessories',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/tank_mixer-1.jpg`,
-    description: 'Complete range of tank fittings, lids, and accessories for sprayer tanks.',
-    specs: [
-      { label: 'Type', value: 'Tank Accessories' },
-      { label: 'Includes', value: 'Lids, Fittings, Connectors' },
-      { label: 'Material', value: 'HDPE/Brass' },
-      { label: 'Compatibility', value: 'All Tank Sizes' },
-      { label: 'Quality', value: 'Industrial Grade' },
-      { label: 'Usage', value: 'Tank Maintenance' }
-    ],
-    category: 'accessories'
-  },
-  {
-    id: 'italian-gun',
-    title: 'Italian Spray Gun',
-    image: `${ASSETS_BASE_PATH}/assets/images/services/special7.jpg`,
-    description: 'High-quality Italian spray gun for precision application. Designed for professional agricultural spraying.',
-    specs: [
-      { label: 'Origin', value: 'Italy' },
-      { label: 'Type', value: 'Spray Gun' },
-      { label: 'Material', value: 'Brass/Stainless Steel' },
-      { label: 'Nozzle', value: 'Adjustable' },
-      { label: 'Pressure Rating', value: 'High Pressure' },
-      { label: 'Usage', value: 'Precision Spraying' }
-    ],
-    category: 'accessories'
-  },
-  {
-    id: 'high-pressure-gun',
-    title: 'High Pressure Gun',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/highpressure1.jpg`,
-    description: 'Heavy-duty gun for high-pressure applications. Built for demanding professional use.',
-    specs: [
-      { label: 'Type', value: 'High Pressure' },
-      { label: 'Material', value: 'Brass/Steel' },
-      { label: 'Max Pressure', value: '50+ Bar' },
-      { label: 'Trigger', value: 'Ergonomic Design' },
-      { label: 'Connection', value: 'Quick Connect' },
-      { label: 'Usage', value: 'Heavy Duty Spraying' }
-    ],
-    category: 'accessories'
-  },
-  {
-    id: 'pruning-secateur',
-    title: 'Pruning Secateur',
-    image: `${ASSETS_BASE_PATH}/assets/images/projects/pruning_secateur.jpg`,
-    description: 'Professional pruning tool for orchard maintenance. Sharp and durable for clean cuts.',
-    specs: [
-      { label: 'Type', value: 'Bypass Secateur' },
-      { label: 'Blade', value: 'High Carbon Steel' },
-      { label: 'Handle', value: 'Ergonomic Grip' },
-      { label: 'Cut Capacity', value: 'Up to 25mm' },
-      { label: 'Lock', value: 'Safety Lock' },
-      { label: 'Usage', value: 'Pruning, Trimming' }
-    ],
-    category: 'accessories'
-  }
-];
+export const ACCESSORIES: Product[] = [];
 
 // ============================================
 // ALL PRODUCTS (Combined)

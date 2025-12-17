@@ -1,28 +1,62 @@
-<section class="page-header">
-  <div class="container">
-    <h1>{{ pageTitle }}</h1>
-    <p class="page-subtitle">{{ pageSubtitle }}</p>
-  </div>
-</section>
+@if (currentCategory === 'mounted' || currentCategory === 'knapsack' || currentCategory === 'trailed') {
+  <!-- Special layout for Mounted/Knapsack Sprayers with grapes background -->
+  <section class="page-header mounted-header">
+    <div class="container">
+      <h1>{{ pageTitle }}</h1>
+    </div>
+  </section>
 
-<section class="products-section">
-  <div class="container">
-    @if (currentCategory === 'mounted' || currentCategory === 'trailed' || currentCategory === 'knapsack') {
-      <!-- Show only sprayers for specific category -->
-      <div class="product-grid">
-        @for (item of sprayers; track item.id) {
-          <mat-card class="product-card clickable" [routerLink]="['/product', item.id]">
-            <div class="card-image">
-              <img [src]="item.image" [alt]="item.title">
+  <section class="products-section mounted-section">
+    <div class="container">
+      @for (item of sprayers; track item.id) {
+        <div class="mounted-product-layout">
+          <!-- Two images side by side -->
+          <div class="mounted-images">
+            @if (item.images && item.images.length > 0) {
+              @for (img of item.images; track img) {
+                <div class="mounted-image-wrapper">
+                  <img [src]="img" [alt]="item.title">
+                </div>
+              }
+            } @else {
+              <div class="mounted-image-wrapper">
+                <img [src]="item.image" [alt]="item.title">
+              </div>
+            }
+          </div>
+
+          <!-- Description -->
+          <p class="mounted-description">{{ item.description }}</p>
+
+          <!-- Features list -->
+          @if (item.features && item.features.length > 0) {
+            <div class="mounted-features">
+              <h3 class="features-title">Features :</h3>
+              <ul class="features-list">
+                @for (feature of item.features; track feature) {
+                  <li>
+                    <mat-icon class="feature-check">check_circle</mat-icon>
+                    <span>{{ feature }}</span>
+                  </li>
+                }
+              </ul>
             </div>
-            <mat-card-content>
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.description }}</p>
-            </mat-card-content>
-          </mat-card>
-        }
-      </div>
-    } @else if (currentCategory === 'equipment') {
+          }
+        </div>
+      }
+    </div>
+  </section>
+} @else {
+  <section class="page-header">
+    <div class="container">
+      <h1>{{ pageTitle }}</h1>
+      <p class="page-subtitle">{{ pageSubtitle }}</p>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+    @if (currentCategory === 'equipment') {
       <!-- Show equipment -->
       <div class="product-grid four-col">
         @for (item of equipment; track item.id) {
@@ -127,5 +161,6 @@
       </mat-tab>
       </mat-tab-group>
     }
-  </div>
-</section>
+    </div>
+  </section>
+}

@@ -6,7 +6,7 @@
       </div>
     }
   </div>
-  
+
   <!-- Slider Navigation Arrows -->
   <button class="slider-arrow slider-arrow-prev" (click)="prevSlide()" aria-label="Previous slide">
     <mat-icon>chevron_left</mat-icon>
@@ -14,19 +14,19 @@
   <button class="slider-arrow slider-arrow-next" (click)="nextSlide()" aria-label="Next slide">
     <mat-icon>chevron_right</mat-icon>
   </button>
-  
+
   <!-- Slider Dots -->
   <div class="slider-dots">
     @for (slide of sliderImages; track slide; let i = $index) {
-      <button 
-        class="slider-dot" 
+      <button
+        class="slider-dot"
         [class.active]="i === currentSlide"
         (click)="currentSlide = i"
         [attr.aria-label]="'Go to slide ' + (i + 1)">
       </button>
     }
   </div>
-  
+
   <div class="hero-overlay">
     <div class="container">
       <div class="hero-content">
@@ -37,15 +37,12 @@
         </h1>
         <p class="hero-subtitle">Premium Agricultural Sprayers, Spray Pumps, Nozzles & Accessories</p>
         <div class="hero-cta">
-          <a class="btn-hero-primary" routerLink="/products">
+          <a class="btn-hero-primary" routerLink="/equipment">
             <span>Explore Products</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
-          <a class="btn-hero-outline" routerLink="/contact">
-            <span>Contact Us</span>
-          </a>
         </div>
-        
+
         <!-- Social Contact Buttons -->
         <div class="hero-social-contact">
           <a href="tel:+919689324004" class="social-btn phone-btn" aria-label="Call Us">
@@ -92,13 +89,13 @@
       <div class="about-content">
         <h3>Premium Sprayer & Nozzles</h3>
         <p>
-          Shree Vallabh Agency imports & trades agricultural sprayer equipment since 2014, 
-          providing agricultural spraying solutions. We are committed to continuous growth 
+          Shree Vallabh Agency imports & trades agricultural sprayer equipment since 2014,
+          providing agricultural spraying solutions. We are committed to continuous growth
           and innovation for the benefit of our customers and farmers.
         </p>
         <p>
-          We are the authorized dealer of Comet Diaphragm Pump, Valvomeccanica SRL (Italy). 
-          Shree Vallabh Agency also deals in 600 liter Agricultural Blower, Agricultural Air Blower, 
+          We are the authorized dealer of Comet Diaphragm Pump, Valvomeccanica SRL (Italy).
+          Shree Vallabh Agency also deals in 600 liter Agricultural Blower, Agricultural Air Blower,
           Agricultural Blower Pump & Accessories in Niphad, Nashik, Maharashtra.
         </p>
         <h4>Shree Vallabh Agency Serves:</h4>
@@ -121,7 +118,7 @@
   <div class="container">
     <h2>Agricultural Sprayers</h2>
     <p class="section-subtitle">
-      We offer various types of farm sprayers including Mounted Sprayer, Trailed Sprayer, 
+      We offer various types of farm sprayers including Mounted Sprayer, Trailed Sprayer,
       and Battery Operated Knapsack Sprayer for crops like Grapes, Pomegranates, Oranges, and more.
     </p>
     <div class="card-grid">
@@ -135,7 +132,7 @@
             <p>{{ sprayer.description }}</p>
           </mat-card-content>
           <mat-card-actions>
-            <a mat-button color="primary" routerLink="/products">Learn More</a>
+            <a mat-button color="primary" [routerLink]="sprayer.link">Learn More</a>
           </mat-card-actions>
         </mat-card>
       }
@@ -147,19 +144,21 @@
   <div class="container">
     <h2>Our Special Equipment</h2>
     <p class="section-subtitle">
-      We serve special equipment including Diaphragm Pump, Orion Brass Controller, 
+      We serve special equipment including Diaphragm Pump, Orion Brass Controller,
       Volvolmeccanica Gun & Nozzles, Brass Filter, Fan Assembly, Pressure Meter and more.
     </p>
     <div class="equipment-grid">
       @for (item of equipment; track item.title) {
-        <mat-card class="equipment-card">
-          <div class="card-image small">
-            <img [src]="item.image" [alt]="item.title">
-          </div>
-          <mat-card-content>
-            <h4>{{ item.title }}</h4>
-          </mat-card-content>
-        </mat-card>
+        <a [routerLink]="'/product/' + item.id" class="equipment-card-link">
+          <mat-card class="equipment-card">
+            <div class="card-image small">
+              <img [src]="item.image" [alt]="item.title">
+            </div>
+            <mat-card-content>
+              <h4>{{ item.title }}</h4>
+            </mat-card-content>
+          </mat-card>
+        </a>
       }
     </div>
   </div>
@@ -187,11 +186,11 @@
       <div class="cert-content">
         <h2>We Are An ISO 9001:2015 Certified!</h2>
         <p>
-          Quality and Reliability is what we live by. We are constantly striving for success 
-          and aim to achieve the highest quality standards for all our Products. All Round Technology 
-          has implemented a Quality Management System in comply with standards ISO 9001:2015. 
-          The quality management system covers all company processes and activities. Our highly 
-          motivated and experienced professionals focus on processes and are committed to 
+          Quality and Reliability is what we live by. We are constantly striving for success
+          and aim to achieve the highest quality standards for all our Products. All Round Technology
+          has implemented a Quality Management System in comply with standards ISO 9001:2015.
+          The quality management system covers all company processes and activities. Our highly
+          motivated and experienced professionals focus on processes and are committed to
           delivering products of higher quality.
         </p>
       </div>

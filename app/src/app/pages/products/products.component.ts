@@ -19,10 +19,10 @@ export class ProductsComponent implements OnInit {
   mountedSprayers = MOUNTED_SPRAYERS;
   trailedSprayers = TRAILED_SPRAYERS;
   knapsackSprayers = KNAPSACK_SPRAYERS;
-  equipment = EQUIPMENT;
+  equipment = [...EQUIPMENT, ...NOZZLES];
   nozzles = NOZZLES;
   accessories = ACCESSORIES;
-  
+
   // Current category filter
   currentCategory: string = '';
   pageTitle: string = 'Our Products';
@@ -40,17 +40,17 @@ export class ProductsComponent implements OnInit {
   updatePageInfo() {
     switch(this.currentCategory) {
       case 'mounted':
-        this.pageTitle = 'Mounted Sprayers';
+        this.pageTitle = '200 Litre Mounted Sprayers';
         this.pageSubtitle = 'Tractor-mounted sprayers for efficient crop spraying operations';
         this.sprayers = MOUNTED_SPRAYERS;
         break;
       case 'trailed':
-        this.pageTitle = 'Trailed Sprayers';
+        this.pageTitle = 'Basic / Dominator / Citrus-Plus';
         this.pageSubtitle = 'High-capacity trailed sprayers for large orchards and vineyards';
         this.sprayers = TRAILED_SPRAYERS;
         break;
       case 'knapsack':
-        this.pageTitle = 'Battery Operated Knapsack';
+        this.pageTitle = 'Battery Operated Knapsack Sprayer';
         this.pageSubtitle = 'Portable battery-powered sprayers for small areas and precision spraying';
         this.sprayers = KNAPSACK_SPRAYERS;
         break;

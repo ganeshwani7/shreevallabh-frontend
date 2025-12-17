@@ -679,6 +679,12 @@ section {
   background: var(--gray-50);
 }
 
+.equipment-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .equipment-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
