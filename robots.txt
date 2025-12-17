@@ -1,0 +1,9 @@
+# robots.txt for Shree Vallabh Agency
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ganeshwani7.github.io/shreevallabh-frontend/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
