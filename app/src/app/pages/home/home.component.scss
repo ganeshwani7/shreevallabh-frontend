@@ -302,7 +302,7 @@ section {
     font-size: 2.25rem;
     font-weight: 600;
     margin-bottom: 16px;
-    color: var(--gray-900);
+    color: var(--gray-800);
   }
 
   .section-subtitle {
@@ -310,7 +310,7 @@ section {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 48px;
-    color: var(--gray-500);
+    color: var(--gray-700);
     font-size: 1.0625rem;
     line-height: 1.7;
   }
@@ -375,14 +375,14 @@ section {
       font-family: var(--font-body);
       margin-bottom: 20px;
       line-height: 1.8;
-      color: var(--gray-600);
+      color: var(--gray-700);
     }
 
     h4 {
       font-family: var(--font-heading);
       margin-top: 28px;
       margin-bottom: 20px;
-      color: var(--gray-800);
+      color: var(--gray-700);
     }
   }
 
@@ -468,12 +468,12 @@ section {
     font-family: var(--font-heading);
     font-size: 1.125rem;
     margin: 20px 16px 10px;
-    color: var(--gray-800);
+    color: var(--gray-700);
   }
 
   p {
     font-family: var(--font-body);
-    color: var(--gray-500);
+    color: var(--gray-600);
     font-size: 0.9375rem;
     padding: 0 16px;
     line-height: 1.6;
@@ -676,7 +676,7 @@ section {
     p {
       font-family: var(--font-body);
       line-height: 1.8;
-      color: var(--gray-600);
+      color: var(--gray-700);
     }
   }
 
