@@ -5,7 +5,7 @@
  * Edit this file to update company info, contact details, navigation, etc.
  */
 
-export const ASSETS_BASE_PATH = '/shreevallabh-frontend';
+export const ASSETS_BASE_PATH = '';
 
 // ============================================
 // COMPANY INFORMATION
@@ -246,6 +246,16 @@ export const VIDEOS: Video[] = [
     title: 'Shree Vallabh Agency - Agricultural Sprayer Demo',
     videoId: 'LiEr7HCNfQE',
     description: 'Watch our agricultural sprayer equipment in action. See how our sprayers provide efficient coverage for vineyards and orchards.'
+  },
+  {
+    title: 'Agricultural Sprayer in Action',
+    videoId: 'FlmJ_WwqN-Y',
+    description: 'See our agricultural spraying equipment delivering effective coverage in the field.'
+  },
+  {
+    title: 'Sprayer Equipment Demonstration',
+    videoId: '6JvhQUQo0-E',
+    description: 'Detailed demonstration of our sprayer equipment and its applications.'
   }
 ];
 

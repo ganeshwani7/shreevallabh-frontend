@@ -22,7 +22,7 @@ export interface Product {
 }
 
 // Base path for assets - change this if deploying to different location
-export const ASSETS_BASE_PATH = '/shreevallabh-frontend';
+export const ASSETS_BASE_PATH = '';
 
 // ============================================
 // SPRAYERS - MOUNTED
