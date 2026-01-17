@@ -80,12 +80,12 @@ export const FOOTER_SITE_LINKS = [
 ];
 
 export const FOOTER_EQUIPMENT_LINKS = [
-  { name: 'Comet 71 LT Diaphragm Pump', id: 'diaphragm-pump' },
+  { name: 'Comet 71 LT Diaphragm Pump', id: 'comet-71-lt' },
   { name: 'Orion Brass Controller', id: 'orion-controller' },
   { name: 'VDR 50 Controller', id: 'vdr-controller' },
   { name: 'Volvolmeccanica Gun', id: 'volvolmeccanica-gun' },
   { name: 'Grease Free Piston Pump', id: 'piston-pump' },
-  { name: 'Italian Spray Gun', id: 'italian-gun' }
+  { name: 'Italian Spray Gun', id: 'italian-spray-gun' }
 ];
 
 // ============================================
